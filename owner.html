@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Own your practice's home. Turnkey 10,000 SF medical building in Crestview, FL. SBA 504 financing. 90 days to open." />
+<title>577 Brookmeade · Own Your Practice's Home · Crestview, FL</title>
+
+<link rel="icon" href="assets/faviconwhite.png" type="image/png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  /* ============================================
+     1. RESET + BASE
+     ============================================ */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { min-height: 100vh; line-height: 1.5; }
+  img, picture, svg { max-width: 100%; display: block; }
+  button, input, textarea, select { font: inherit; color: inherit; }
+  a { color: inherit; }
+  ::selection { background: var(--accent); color: var(--ink); }
+
+  /* ============================================
+     2. TOKENS — warmer than the platform page
+     ============================================ */
+  :root {
+    /* Color — matches Version B for visual continuity */
+    --ink:        #0B0C0E;    /* same as platform page */
+    --ink-2:      #131418;    /* card / aside bg */
+    --ink-3:      #1A1B1F;    /* deeper layer */
+    --paper:      #ECE7DC;    /* warm cream, matches B */
+    --paper-dim:  rgba(236, 231, 220, 0.75);
+    --muted:      #7C7972;
+    --muted-2:    #4A4843;
+    --accent:     #0099FF;
+    --accent-2:   #33ADFF;
+    --accent-dim: rgba(0, 153, 255, 0.14);
+    --warmth:     #C7A95B;
+    --warmth-dim: rgba(199, 169, 91, 0.14);
+    --rule:       #1F2025;    /* same as B */
+    --rule-2:     #2A2B30;
+
+    /* Type families */
+    --display: 'Newsreader', 'Iowan Old Style', 'Georgia', serif;
+    --body:    'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+    --mono:    'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+    /* Type scale — slightly bigger body, more readable for the audience */
+    --fs-micro:    13px;
+    --fs-small:    14px;
+    --fs-body:     17px;        /* up from 16 — more readable prose */
+    --fs-lead:     20px;        /* up from 18 — warmer lead */
+    --fs-h3:       clamp(22px, 2.2vw, 28px);
+    --fs-h2:       clamp(30px, 3.6vw, 48px);
+    --fs-h1:       clamp(38px, 5vw, 64px);
+    --fs-display:  clamp(40px, 5.5vw, 64px);
+
+    /* Spacing */
+    --gutter:    clamp(28px, 5vw, 80px);
+    --section-y: clamp(64px, 7vw, 96px);
+    --measure:   680px;
+    --max-w:     1280px;
+  }
+
+  body {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--body);
+    font-size: var(--fs-body);
+    font-weight: 400;
+    letter-spacing: -0.005em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--display);
+    font-weight: 400;
+    line-height: 1.06;
+    letter-spacing: -0.022em;
+    color: var(--paper);
+  }
+  h1 { font-size: var(--fs-h1); }
+  h2 { font-size: var(--fs-h2); }
+  h3 { font-size: var(--fs-h3); letter-spacing: -0.015em; }
+
+  p { color: var(--paper-dim); }
+  p + p { margin-top: 1.3em; }
+
+  /* Section eyebrow — same vocabulary as platform page */
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: clamp(20px, 2.4vw, 30px);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+  }
+  .eyebrow .num { color: var(--accent); font-weight: 600; }
+  .eyebrow .dot { color: var(--rule-2); }
+
+  .lead {
+    font-size: var(--fs-lead);
+    line-height: 1.5;
+    color: var(--paper);
+    max-width: 720px;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+  }
+
+  /* ============================================
+     3. LAYOUT
+     ============================================ */
+  .container {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+  }
+  section { padding: var(--section-y) 0; border-top: 1px solid var(--rule); }
+  section:first-of-type { border-top: none; }
+
+  .measure { max-width: var(--measure); }
+
+  /* ============================================
+     4. IMAGE SLOTS
+     ============================================ */
+  .image-slot {
+    position: relative;
+    background: var(--ink-2);
+    border: 1px solid var(--rule);
+    overflow: hidden;
+    width: 100%;
+  }
+  .image-slot[data-aspect="16/9"]  { aspect-ratio: 16 / 9; }
+  .image-slot[data-aspect="4/3"]   { aspect-ratio: 4 / 3; }
+  .image-slot[data-aspect="3/2"]   { aspect-ratio: 3 / 2; }
+  .image-slot[data-aspect="3/4"]   { aspect-ratio: 3 / 4; }
+  .image-slot[data-aspect="1/1"]   { aspect-ratio: 1 / 1; }
+  .image-slot[data-aspect="2/1"]   { aspect-ratio: 2 / 1; }
+  .image-slot[data-aspect="21/9"]  { aspect-ratio: 21 / 9; }
+
+  .image-slot::before {
+    content: "▢  " attr(data-slot);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    font-family: var(--mono);
+    font-size: var(--fs-micro);
+    letter-spacing: 0.12em;
+    color: var(--muted-2);
+    white-space: pre-wrap;
+    background: repeating-linear-gradient(
+      135deg, transparent 0, transparent 14px,
+      rgba(255,255,255,0.012) 14px, rgba(255,255,255,0.012) 15px
+    );
+  }
+  .image-slot img { width: 100%; height: 100%; object-fit: cover; }
+  .image-slot--bottom img  { object-position: center 78%; }
+  .image-slot--top img     { object-position: center 22%; }
+  .image-slot--right img   { object-position: right center; }
+  .image-slot--left img    { object-position: left center; }
+  .image-slot--center img  { object-position: center center; }
+  .image-slot--contain img { object-fit: contain; background: var(--ink); }
+  .image-slot:has(img[src]:not([src=""]))::before { display: none; }
+
+  /* ============================================
+     5. HEADER
+     ============================================ */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(11, 12, 14, 0.86);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 18px 0;
+    min-height: 64px;
+  }
+  .site-header__id {
+    font-family: var(--mono);
+    font-size: var(--fs-micro);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--paper);
+    white-space: nowrap;
+    text-decoration: none;
+  }
+  .site-header__id span {
+    color: var(--muted);
+    margin-left: 12px;
+  }
+  .site-header__nav {
+    display: flex;
+    gap: 28px;
+    font-family: var(--mono);
+    font-size: var(--fs-micro);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .site-header__nav a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .site-header__nav a:hover,
+  .site-header__nav a:focus-visible { color: var(--paper); outline: none; }
+  @media (max-width: 960px) {
+    .site-header__nav { gap: 20px; }
+    .site-header__id span { display: none; }
+  }
+  @media (max-width: 720px) {
+    .site-header__nav { display: none; }
+  }
+
+  /* ============================================
+     6. BUTTONS + LINKS
+     ============================================ */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 28px;
+    font-family: var(--mono);
+    font-size: var(--fs-small);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.22s ease;
+    background: var(--accent);
+    color: var(--ink);
+  }
+  .btn:hover, .btn:focus-visible {
+    background: var(--accent-2);
+    outline: none;
+    transform: translateY(-1px);
+  }
+  .btn--ghost {
+    background: transparent;
+    color: var(--paper);
+    border-color: var(--rule-2);
+  }
+  .btn--ghost:hover, .btn--ghost:focus-visible {
+    background: var(--ink-2);
+    border-color: var(--paper-dim);
+    color: var(--paper);
+  }
+  .btn .arrow {
+    display: inline-block;
+    transition: transform 0.22s ease;
+  }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  .link-arrow {
+    font-family: var(--mono);
+    font-size: var(--fs-small);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--paper);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule-2);
+    padding-bottom: 4px;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+  .link-arrow:hover, .link-arrow:focus-visible {
+    border-color: var(--accent);
+    color: var(--accent);
+    outline: none;
+  }
+
+  .resource {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-top: 28px;
+    font-family: var(--mono);
+    font-size: var(--fs-small);
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    color: var(--paper);
+    border-bottom: 1px solid var(--rule-2);
+    padding-bottom: 6px;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+  .resource::before { content: "↓"; color: var(--accent); }
+  .resource:hover, .resource:focus-visible {
+    border-color: var(--accent);
+    color: var(--accent);
+    outline: none;
+  }
+  .resource .filetype {
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+
+  /* ============================================
+     7. HERO
+     ============================================ */
+  .hero {
+    padding-top: clamp(56px, 8vw, 104px);
+    padding-bottom: 0;
+    border-top: none;
+  }
+  .hero__head { max-width: 1000px; }
+  .hero__headline {
+    font-size: var(--fs-h1);
+    font-weight: 400;
+    margin-top: 12px;
+    margin-bottom: 28px;
+    color: var(--paper);
+  }
+  .hero__headline em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--paper-dim);
+  }
+  .hero__sub {
+    font-size: var(--fs-lead);
+    line-height: 1.5;
+    color: var(--paper-dim);
+    max-width: 720px;
+    margin-bottom: 48px;
+    font-weight: 300;
+  }
+
+  /* Anchor metrics — softer than B, more practical/welcoming */
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+  .metric {
+    padding: 36px 24px 32px;
+    border: 1px solid var(--rule-2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--ink);
+    transition: border-color 0.3s ease, transform 0.3s ease;
+  }
+  .metric:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .metric__label {
+    font-family: var(--mono);
+    font-size: var(--fs-micro);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 22px;
+  }
+  .metric__value {
+    font-family: var(--display);  /* serif here, not mono — warmer than B */
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+  .metric__sub {
+    font-size: var(--fs-small);
+    line-height: 1.55;
+    color: var(--paper-dim);
+    max-width: 22em;
+  }
+
+  @media (max-width: 900px) {
+    .metrics { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 540px) {
+    .metrics { grid-template-columns: 1fr; gap: 12px; }
+    .metric { padding: 28px 20px 26px; }
+  }
+
+  /* Hero CTA block */
+  .hero__cta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 40px;
+    margin-bottom: 56px;
+  }
+
+  .hero__media { margin-top: 0; }
+  .hero__media .image-slot { border-left: none; border-right: none; }
+
+  /* ============================================
+     8. CALCULATOR
+     ============================================ */
+  .calc__head { max-width: 720px; margin-bottom: 48px; }
+
+  .calc {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 0;
+    border: 1px solid var(--rule-2);
+    background: var(--ink);
+    overflow: hidden;
+  }
+  .calc__inputs {
+    padding: clamp(28px, 4vw, 48px);
+    border-right: 1px solid var(--rule);
+  }
+  .calc__output {
+    padding: clamp(28px, 4vw, 48px);
+    background: var(--ink-2);
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .calc__title {
+    font-family: var(--mono);
+    font-size: var(--fs-micro);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 28px;
+  }
+  .calc-field {
+    margin-bottom: 32px;
+  }
+  .calc-field:last-child { margin-bottom: 0; }
+  .calc-field__label {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+  .calc-field__name {
+    font-family: var(--body);
+    font-size: var(--fs-body);
+    color: var(--paper);
+    font-weight: 400;
+  }
+  .calc-field__value {
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+    font-size: var(--fs-lead);
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: -0.01em;
+  }
+
+  /* Slider */
+  .calc-field input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    background: var(--rule-2);
+    outline: none;
+    border-radius: 0;
+  }
+  .calc-field input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    background: var(--accent);
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid var(--ink);
+  }
+  .calc-field input[type="range"]::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    background: var(--accent);
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid var(--ink);
+  }
+  .calc-field__range {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-family: var(--mono);
+    font-size: var(--fs-micro);
+    color: var(--muted-2);
+    letter-spacing: 0.06em;
+  }
+
+  /* Segmented selector */
+  .calc-segmented {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    border: 1px solid var(--rule-2);
+  }
+  .calc-segmented input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .calc-segmented label {
+    text-align: center;
+    padding: 12px 8px;
+    font-family: var(--mono);
+    font-size: var(--fs-small);
+    color: var(--paper-dim);
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+    letter-spacing: 0.04em;
+  }
+  .calc-segmented input[type="radio"]:checked + label {
+    background: var(--accent);
+    color: var(--ink);
+  }
+  .calc-segmented label:hover { color: var(--paper); }
+  .calc-segmented input[type="radio"]:checked + label:hover { color: var(--ink); }
+
+  .calc-output__primary {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 28px;
+  }
+  .calc-output__label {
+    font-family: var(--mono);
+    font-size: var(--fs-micro);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .calc-output__big {
+    font-family: var(--display);
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .calc-output__big-suffix {
+    font-size: 0.4em;
+    color: var(--muted);
+    margin-left: 8px;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+  .calc-output__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--rule);
+    gap: 16px;
+  }
+  .calc-output__row:last-of-type { border-bottom: none; }
+  .calc-output__row-label {
+    font-family: var(--body);
+    font-size: var(--fs-small);
+    color: var(--paper-dim);
+    line-height: 1.4;
+    max-width: 24em;
+  }
+  .calc-output__row-value {
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+    font-size: var(--fs-body);
+    color: var(--paper);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .calc-output__row-value--vs {
+    color: var(--muted);
+    text-decoration: line-through;
+  }
+  .calc-output__cta {
+    margin-top: auto;
+    padding-top: 24px;
+  }
+  .calc-output__cta .btn { width: 100%; justify-content: center; }
+  .calc-footer {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    font-family: var(--mono);
+    font-size: var(--fs-micro);
+    color: var(--muted);
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 880px) {
+    .calc { grid-template-columns: 1fr; }
+    .calc__inputs { border-right: none; border-bottom: 1px solid var(--rule); }
+  }
+
+  /* ============================================
+     9. LEASING vs OWNING TABLE
+     ============================================ */
+  .case__head { max-width: 760px; margin-bottom: 48px; }
+  .case__body { max-width: var(--measure); margin-bottom: 64px; }
+  .case__body p { font-size: var(--fs-body); line-height: 1.7; }
+
+  .compare {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    border: 1px solid var(--rule-2);
+    background: var(--ink);
+  }
+  .compare__col {
+    padding: 0;
+  }
+  .compare__col--owning { background: var(--ink-2); }
+  .compare__col-head {
+    padding: 24px 32px;
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--mono);
+    font-size: var(--fs-micro);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .compare__col--owning .compare__col-head { color: var(--accent); font-weight: 600; }
+  .compare__col-head span {
+    display: block;
+    font-family: var(--display);
+    font-size: clamp(22px, 2.4vw, 30px);
+    font-weight: 400;
+    color: var(--paper);
+    letter-spacing: -0.02em;
+    text-transform: none;
+    margin-top: 8px;
+  }
+  .compare__col-head .strikethrough {
+    text-decoration: line-through;
+    text-decoration-color: var(--warmth);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0;
+    color: var(--paper-dim);
+  }
+  .compare__list {
+    list-style: none;
+  }
+  .compare__list li {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    font-size: var(--fs-body);
+    line-height: 1.5;
+    color: var(--paper);
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .compare__list li:last-child { border-bottom: none; }
+  .compare__col--leasing .compare__list li::before {
+    content: "—";
+    color: var(--muted-2);
+    font-family: var(--mono);
+    flex-shrink: 0;
+  }
+  .compare__col--owning .compare__list li::before {
+    content: "✓";
+    color: var(--accent);
+    font-family: var(--mono);
+    flex-shrink: 0;
+  }
+  .compare__col--leasing .compare__list li { color: var(--paper-dim); }
+
+  @media (max-width: 720px) {
+    .compare { grid-template-columns: 1fr; }
+    .compare__col--leasing { border-bottom: 1px solid var(--rule-2); }
+  }
+
+  /* ============================================
+     10. PROPERTY TOUR
+     ============================================ */
+  .tour__head { max-width: 760px; margin-bottom: 48px; }
+  .tour__head h2 + p { margin-top: 20px; }
+
+  .gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 28px;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .gallery-header h3 {
+    font-family: var(--mono);
+    font-size: var(--fs-small);
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--paper);
+  }
+  .gallery-header__link {
+    font-family: var(--mono);
+    font-size: var(--fs-micro);
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule-2);
+    padding-bottom: 4px;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+  .gallery-header__link:hover {
+    border-color: var(--accent);
+    color: var(--accent-2);
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    /* Container aspect ratio drives total gallery height; rows divide it evenly.
+       6 cols × 3 rows ratio = 2:1 gives a balanced featured-photo proportion. */
+    aspect-ratio: 2 / 1;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .gallery > * {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  .gallery > *:nth-child(1) { grid-column: span 4; grid-row: span 2; }
+  .gallery > *:nth-child(2) { grid-column: span 2; }
+  .gallery > *:nth-child(3) { grid-column: span 2; }
+
+  /* Inside the gallery, slots fill their cell exactly — no aspect-ratio override */
+  .gallery .image-slot[data-aspect] { aspect-ratio: auto; }
+  .gallery .image-slot { height: 100%; width: 100%; }
+
+  /* Below the main gallery, slots 4-6 sit as a separate row outside the 2:1 frame */
+  .gallery-extras {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    margin-top: 12px;
+    margin-bottom: 24px;
+  }
+  .gallery-extras > *:nth-child(1) { grid-column: span 3; aspect-ratio: 3 / 2; }
+  .gallery-extras > *:nth-child(2) { grid-column: span 3; aspect-ratio: 3 / 2; }
+  .gallery-extras > *:nth-child(3) { grid-column: span 6; aspect-ratio: 21 / 9; }
+  .gallery-extras .image-slot[data-aspect] { aspect-ratio: inherit; }
+
+  @media (max-width: 760px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      aspect-ratio: auto;
+    }
+    .gallery > * {
+      grid-column: span 2 !important;
+      grid-row: auto !important;
+      height: auto !important;
+      aspect-ratio: 3 / 2 !important;
+    }
+    .gallery-extras { grid-template-columns: 1fr; }
+    .gallery-extras > * { grid-column: span 1 !important; }
+  }
+
+  .gallery-cta {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 24px;
+    padding: 28px 32px;
+    margin-bottom: 96px;
+    border: 1px solid var(--rule);
+    background: var(--ink);
+    text-decoration: none;
+    color: var(--paper);
+    transition: border-color 0.25s ease, background 0.25s ease;
+  }
+  .gallery-cta:hover {
+    border-color: var(--accent);
+    background: var(--ink-2);
+  }
+  .gallery-cta__label {
+    font-family: var(--display);
+    font-size: clamp(20px, 2vw, 26px);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  .gallery-cta__meta {
+    grid-column: 1 / 2;
+    grid-row: 2;
+    font-family: var(--mono);
+    font-size: var(--fs-micro);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+  .gallery-cta__arrow {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    font-family: var(--mono);
+    font-size: clamp(28px, 3vw, 40px);
+    color: var(--accent);
+    transition: transform 0.25s ease;
+  }
+  .gallery-cta:hover .gallery-cta__arrow { transform: translateX(6px); }
+
+  .floorplan-block {
+    border-top: 1px solid var(--rule);
+    padding-top: 56px;
+  }
+  .floorplan-block .image-slot {
+    background: var(--ink-2);
+  }
+  .floorplan-block__caption {
+    margin-top: 20px;
+    font-family: var(--mono);
+    font-size: var(--fs-micro);
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    text-transform: uppercase;
+    line-height: 1.6;
+  }
+
+  /* ============================================
+     11. BUILD-OUT VALUE
+     ============================================ */
+  .buildout__head { max-width: 720px; margin-bottom: 48px; }
+  .buildout__body { max-width: var(--measure); }
+  .buildout__body p { font-size: var(--fs-body); line-height: 1.7; }
+
+  /* Cost reveal strip */
+  .cost-reveal {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 56px 0;
+    border: 1px solid var(--rule-2);
+  }
+  .cost-reveal__cell {
+    padding: 32px 28px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+  .cost-reveal__cell:last-child { border-right: none; }
+  .cost-reveal__cell--saved { background: var(--ink-2); }
+  .cost-reveal__label {
+    font-family: var(--mono);
+    font-size: var(--fs-micro);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+  .cost-reveal__value {
+    font-family: var(--display);
+    font-size: clamp(28px, 3.2vw, 40px);
+    font-weight: 500;
+    color: var(--paper);
+    letter-spacing: -0.025em;
+    line-height: 1;
+    margin-bottom: 14px;
+  }
+  .cost-reveal__cell--saved .cost-reveal__value { color: var(--accent); }
+  .cost-reveal__sub {
+    font-size: var(--fs-small);
+    color: var(--paper-dim);
+    line-height: 1.5;
+  }
+  @media (max-width: 720px) {
+    .cost-reveal { grid-template-columns: 1fr; }
+    .cost-reveal__cell { border-right: none; border-bottom: 1px solid var(--rule); }
+    .cost-reveal__cell:last-child { border-bottom: none; }
+  }
+
+  .buildout__gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 56px;
+  }
+  @media (max-width: 720px) {
+    .buildout__gallery { grid-template-columns: 1fr; }
+  }
+  .buildout__caption {
+    margin-top: 20px;
+    font-family: var(--mono);
+    font-size: var(--fs-micro);
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  /* ============================================
+     12. LOCATION (simplified for A)
+     ============================================ */
+  .location__head { max-width: 720px; margin-bottom: 48px; }
+  .location__body { max-width: var(--measure); margin-bottom: 56px; }
+  .location__body p { font-size: var(--fs-body); line-height: 1.7; }
+
+  .location__map {
+    background: var(--ink-2);
+    border: 1px solid var(--rule-2);
+    padding: clamp(28px, 4vw, 56px);
+  }
+  .location__map svg { width: 100%; height: auto; display: block; }
+  .location__map-caption {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    font-family: var(--mono);
+    font-size: var(--fs-micro);
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  /* ============================================
+     13. TENANT INCOME OPTION
+     ============================================ */
+  .income__head { max-width: 720px; margin-bottom: 48px; }
+  .income__body { max-width: var(--measure); margin-bottom: 56px; }
+  .income__body p { font-size: var(--fs-body); line-height: 1.7; }
+
+  .income-viz {
+    display: grid;
+    grid-template-columns: 2.13fr 1fr;  /* 6,800 vs 3,200 SF, real ratio */
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .income-viz__unit {
+    border: 1px solid var(--rule-2);
+    background: var(--ink-2);
+    padding: clamp(28px, 3.5vw, 44px);
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  .income-viz__unit--yours {
+    background: var(--ink);
+    border-color: var(--accent);
+  }
+  .income-viz__unit-label {
+    font-family: var(--mono);
+    font-size: var(--fs-micro);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+  .income-viz__unit--yours .income-viz__unit-label { color: var(--accent); }
+  .income-viz__unit-size {
+    font-family: var(--display);
+    font-size: clamp(28px, 3.4vw, 44px);
+    font-weight: 500;
+    color: var(--paper);
+    line-height: 1;
+    letter-spacing: -0.025em;
+    margin-bottom: 12px;
+  }
+  .income-viz__unit-name {
+    font-size: var(--fs-body);
+    color: var(--paper-dim);
+    line-height: 1.4;
+    margin-bottom: 24px;
+  }
+  .income-viz__unit-meta {
+    border-top: 1px solid var(--rule);
+    padding-top: 16px;
+    font-family: var(--mono);
+    font-size: var(--fs-micro);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .income-viz__unit-meta strong {
+    color: var(--paper);
+    font-weight: 500;
+    display: block;
+    margin-top: 4px;
+    font-size: var(--fs-body);
+    letter-spacing: -0.01em;
+    text-transform: none;
+  }
+  .income-viz__unit--leased .income-viz__unit-meta strong { color: var(--warmth); }
+  .income-viz__caption {
+    font-family: var(--mono);
+    font-size: var(--fs-micro);
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 24px;
+  }
+  @media (max-width: 640px) {
+    .income-viz { grid-template-columns: 1fr; }
+  }
+
+  /* ============================================
+     14. FORM
+     ============================================ */
+  .cta__head { max-width: 720px; margin-bottom: 48px; }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+    gap: clamp(40px, 6vw, 96px);
+    align-items: start;
+  }
+
+  form#owner-inquiry {
+    display: grid;
+    gap: 24px;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .field { display: flex; flex-direction: column; }
+  .field label {
+    font-family: var(--mono);
+    font-size: var(--fs-micro);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .field label .req { color: var(--accent); margin-left: 4px; }
+
+  .field input,
+  .field select,
+  .field textarea {
+    background: transparent;
+    color: var(--paper);
+    border: none;
+    border-bottom: 1px solid var(--rule-2);
+    padding: 12px 0;
+    font-size: var(--fs-body);
+    font-family: var(--body);
+    transition: border-color 0.2s ease;
+    border-radius: 0;
+  }
+  .field textarea {
+    min-height: 110px;
+    resize: vertical;
+    line-height: 1.55;
+  }
+  .field input::placeholder,
+  .field textarea::placeholder { color: var(--muted-2); }
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus {
+    outline: none;
+    border-bottom-color: var(--accent);
+  }
+  .field select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%237C7972' stroke-width='1.5' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+    padding-right: 24px;
+    cursor: pointer;
+  }
+  .field select option { background: var(--ink); color: var(--paper); }
+
+  .form-submit {
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .form-submit .btn {
+    border: none;
+    cursor: pointer;
+  }
+
+  .form-reassurance {
+    background: var(--ink-2);
+    border: 1px solid var(--rule);
+    padding: 32px;
+  }
+  .form-reassurance h3 {
+    font-family: var(--mono);
+    font-size: var(--fs-small);
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .form-reassurance p {
+    font-size: var(--fs-small);
+    line-height: 1.6;
+    color: var(--paper-dim);
+  }
+  .form-reassurance p + p { margin-top: 12px; }
+  .form-reassurance__cta {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+  }
+  .form-reassurance__cta-label {
+    font-family: var(--mono);
+    font-size: var(--fs-micro);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--paper);
+    font-weight: 500;
+    margin-bottom: 14px;
+  }
+  .form-reassurance__btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .form-confirmation {
+    display: none;
+    padding: 40px;
+    background: var(--ink-2);
+    border-left: 2px solid var(--accent);
+  }
+  .form-confirmation.active { display: block; }
+  .form-confirmation h3 {
+    font-family: var(--display);
+    font-size: var(--fs-h3);
+    color: var(--paper);
+    margin-bottom: 16px;
+  }
+  .form-confirmation p {
+    color: var(--paper-dim);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 880px) {
+    .form-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; gap: 24px; }
+  }
+
+  /* ============================================
+     15. FOOTER — BROKERS
+     ============================================ */
+  .site-footer {
+    border-top: 1px solid var(--rule);
+    padding: var(--section-y) 0 64px;
+    background: var(--ink);
+  }
+  .site-footer .eyebrow { margin-bottom: 48px; }
+
+  .brokers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(20px, 3vw, 32px);
+    margin-bottom: 56px;
+  }
+  .broker {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    border: 1px solid var(--rule);
+    background: var(--ink);
+    transition: border-color 0.3s ease;
+  }
+  .broker:hover { border-color: var(--rule-2); }
+
+  .broker__head {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 28px;
+    align-items: center;
+    padding-bottom: 28px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .broker__photo .image-slot {
+    aspect-ratio: 1 / 1;
+    border: none;
+  }
+  .broker__photo img { object-fit: cover; }
+  .broker__name {
+    font-family: var(--display);
+    font-size: clamp(26px, 2.6vw, 32px);
+    font-weight: 400;
+    color: var(--paper);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  .broker__role {
+    font-family: var(--mono);
+    font-size: var(--fs-micro);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .broker__bio {
+    font-size: var(--fs-small);
+    line-height: 1.6;
+    color: var(--paper-dim);
+    margin-bottom: 28px;
+    flex: 1;
+  }
+  .broker__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: var(--fs-small);
+    color: var(--paper);
+    padding-bottom: 28px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .broker__contact a {
+    color: var(--paper);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+    width: fit-content;
+  }
+  .broker__contact a:hover { border-bottom-color: var(--accent); color: var(--accent); }
+
+  .broker__brokerage {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .broker__brokerage-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted-2);
+  }
+  .broker__brokerage-logo {
+    height: 68px;
+    display: flex;
+    align-items: center;
+  }
+  .broker__brokerage-logo img {
+    height: 100%;
+    width: auto;
+    max-width: 300px;
+    object-fit: contain;
+  }
+  .broker__brokerage-meta {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 920px) {
+    .brokers { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 540px) {
+    .broker { padding: 24px; }
+    .broker__head { grid-template-columns: 120px 1fr; gap: 20px; }
+  }
+
+  .colophon {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 18px;
+    font-family: var(--mono);
+    font-size: var(--fs-micro);
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1.6;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+  }
+  .colophon .left { max-width: 60ch; }
+
+  /* ============================================
+     ACCESSIBILITY
+     ============================================ */
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+  .skip-link {
+    position: absolute;
+    top: -100px;
+    left: var(--gutter);
+    background: var(--accent);
+    color: var(--ink);
+    padding: 12px 18px;
+    font-family: var(--mono);
+    font-size: var(--fs-micro);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    z-index: 100;
+    transition: top 0.2s ease;
+  }
+  .skip-link:focus { top: 12px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+</style>
+</head>
+
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__id">
+        577 Brookmeade <span>Crestview, FL</span>
+      </a>
+      <nav class="site-header__nav" aria-label="Section navigation">
+        <a href="#calculator">Calculator</a>
+        <a href="#case">Own vs. Lease</a>
+        <a href="#tour">The Building</a>
+        <a href="photos.html">Photos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- 01 — HERO -->
+    <section class="hero" aria-labelledby="hero-headline">
+      <div class="container">
+        <div class="hero__head">
+          <div class="eyebrow">
+            <span class="num">01</span><span class="dot">/</span><span>Own your practice's home · Crestview, FL</span>
+          </div>
+          <h1 id="hero-headline" class="hero__headline">
+            Stop paying someone else's mortgage.
+          </h1>
+          <p class="hero__sub">
+            A turnkey 10,000 SF medical building in Crestview, built out and operating — yours to own with SBA 504 financing.
+          </p>
+        </div>
+
+        <div class="metrics" role="list">
+          <div class="metric" role="listitem">
+            <div class="metric__label">Est. Monthly Payment</div>
+            <div class="metric__value" id="hero-pmt">~$13,994</div>
+            <p class="metric__sub">Estimated SBA 504 payment, 10% down. Run your specifics in the calculator below.</p>
+          </div>
+          <div class="metric" role="listitem">
+            <div class="metric__label">To open</div>
+            <div class="metric__value">90 days</div>
+            <p class="metric__sub">vs. 18+ months for new construction. Existing medical license. Walk in, certify, see patients.</p>
+          </div>
+          <div class="metric" role="listitem">
+            <div class="metric__label">Build-out value</div>
+            <div class="metric__value">$400K+</div>
+            <p class="metric__sub">Medical plumbing, treatment rooms, aquatic therapy pool — already installed.</p>
+          </div>
+          <div class="metric" role="listitem">
+            <div class="metric__label">Operational</div>
+            <div class="metric__value">Day 1</div>
+            <p class="metric__sub">No build-out delay. No permit risk. The moment you close, you can open.</p>
+          </div>
+        </div>
+
+        <div class="hero__cta">
+          <a href="#calculator" class="btn">
+            See your monthly payment <span class="arrow">↓</span>
+          </a>
+          <a href="#listing-team" class="link-arrow">Or talk to a listing agent directly →</a>
+        </div>
+      </div>
+
+      <div class="hero__media">
+        <div class="image-slot image-slot--bottom" data-slot="HERO · DRONE AERIAL · 2400×1080" data-aspect="21/9">
+          <img src="assets/hero-drone-aerial.jpg" alt="Aerial drone view of 577 Brookmeade Drive, Crestview, FL." />
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 — CALCULATOR -->
+    <section id="calculator" aria-labelledby="calc-headline">
+      <div class="container">
+        <div class="calc__head">
+          <div class="eyebrow">
+            <span class="num">02</span><span class="dot">/</span><span>Run the numbers</span>
+          </div>
+          <h2 id="calc-headline">What would owning this cost you?</h2>
+          <p class="lead" style="margin-top: 20px;">
+            Three inputs. Your estimated monthly payment in real time.
+          </p>
+          <div class="measure" style="margin-top: 32px;">
+            <p style="font-size: var(--fs-body); line-height: 1.7;">
+              SBA 504 financing was built for owner-occupied commercial real estate like this. Most practices qualify with 10% down, fixed long-term rates on the SBA portion, and a structure designed to keep your monthly cost competitive with — and often lower than — what you're already paying in rent.
+            </p>
+            <p style="font-size: var(--fs-body); line-height: 1.7; margin-top: 20px;">
+              The calculator below gives you a directional estimate. Your lender will produce exact numbers for your situation, but this gets you to within a few hundred dollars.
+            </p>
+          </div>
+        </div>
+
+        <div class="calc">
+          <div class="calc__inputs">
+            <div class="calc__title">Your inputs</div>
+
+            <div class="calc-field">
+              <div class="calc-field__label">
+                <span class="calc-field__name">Purchase price</span>
+                <span class="calc-field__value" id="price-label">$2,200,000</span>
+              </div>
+              <input type="range" id="price-input" min="1800000" max="3000000" step="50000" value="2200000" />
+              <div class="calc-field__range">
+                <span>$1.8M</span>
+                <span>$3.0M</span>
+              </div>
+            </div>
+
+            <div class="calc-field">
+              <div class="calc-field__label">
+                <span class="calc-field__name">Down payment</span>
+                <span class="calc-field__value" id="down-label">10%</span>
+              </div>
+              <div class="calc-segmented">
+                <input type="radio" name="down" id="down-10" value="0.10" checked />
+                <label for="down-10">10%</label>
+                <input type="radio" name="down" id="down-15" value="0.15" />
+                <label for="down-15">15%</label>
+                <input type="radio" name="down" id="down-20" value="0.20" />
+                <label for="down-20">20%</label>
+              </div>
+            </div>
+
+            <div class="calc-field">
+              <div class="calc-field__label">
+                <span class="calc-field__name">Blended SBA rate</span>
+                <span class="calc-field__value" id="rate-label">7.0%</span>
+              </div>
+              <input type="range" id="rate-input" min="6.0" max="8.5" step="0.1" value="7.0" />
+              <div class="calc-field__range">
+                <span>6.0%</span>
+                <span>8.5%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc__output">
+            <div class="calc-output__primary">
+              <div class="calc-output__label">Estimated monthly payment</div>
+              <div class="calc-output__big">
+                <span id="payment-output">$13,994</span><span class="calc-output__big-suffix">/mo</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="calc-output__row">
+                <span class="calc-output__row-label">Down payment required</span>
+                <span class="calc-output__row-value" id="down-output">$220,000</span>
+              </div>
+              <div class="calc-output__row">
+                <span class="calc-output__row-label">Compared to leasing 6,800 SF at $2.00/SF NNN</span>
+                <span class="calc-output__row-value calc-output__row-value--vs">$13,600/mo</span>
+              </div>
+              <div class="calc-output__row">
+                <span class="calc-output__row-label">Less tenant rent on 3,200 SF unit (est.)</span>
+                <span class="calc-output__row-value" id="tenant-output">–$4,800/mo</span>
+              </div>
+              <div class="calc-output__row" style="border-top: 1px solid var(--rule-2); padding-top: 16px; margin-top: 4px;">
+                <span class="calc-output__row-label"><strong style="color: var(--paper); font-weight: 500;">Effective monthly carry</strong></span>
+                <span class="calc-output__row-value" id="net-output" style="color: var(--accent);">$9,194/mo</span>
+              </div>
+            </div>
+
+            <div class="calc-output__cta">
+              <a href="#contact" class="btn">
+                Send me the full ownership breakdown <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <p class="calc-footer">
+          This is a directional estimate, not a loan quote. We'll connect you with an SBA-experienced lender to run your exact numbers.
+        </p>
+      </div>
+    </section>
+
+    <!-- 03 — CASE FOR OWNERSHIP -->
+    <section id="case" aria-labelledby="case-headline">
+      <div class="container">
+        <div class="case__head">
+          <div class="eyebrow">
+            <span class="num">03</span><span class="dot">/</span><span>The case for ownership</span>
+          </div>
+          <h2 id="case-headline">Every rent check goes to someone else's retirement.</h2>
+          <p class="lead" style="margin-top: 20px;">
+            Yours can start going to your own.
+          </p>
+        </div>
+
+        <div class="case__body">
+          <p>A decade of lease payments is a decade of building someone else's equity. At $13,000 to $20,000 a month in rent — typical for a practice this size in NWFL — that's $1.5M to $2.4M paid out over ten years with nothing on your balance sheet at the end.</p>
+          <p>Owning your practice's building flips that math. The payment goes to principal. The building appreciates. When you retire, the building is either an income asset you keep or a sale that funds your next chapter.</p>
+          <p>The catch most owners worry about — that buying is complicated, risky, or out of reach — usually comes from imagining a deal that doesn't apply here. This building is already medical-licensed. It's already built out. It's already operating. There's no construction risk because there's no construction. There's no permit risk because there are no permits to pull. There's a 2023 roof, so no near-term surprises.</p>
+          <p style="font-size: var(--fs-lead); color: var(--paper); margin-top: 28px;">You don't need to build a building. You just need to own one.</p>
+        </div>
+
+        <div class="compare" role="figure" aria-label="Comparison: leasing versus owning your practice's building">
+          <div class="compare__col compare__col--leasing">
+            <div class="compare__col-head">
+              If you keep leasing<span class="strikethrough">Building someone else's wealth</span>
+            </div>
+            <ul class="compare__list">
+              <li>Monthly payment builds zero equity</li>
+              <li>Landlord controls renewal terms</li>
+              <li>Annual rent increases</li>
+              <li>Move when the lease ends</li>
+              <li>Improvements you make benefit the owner</li>
+            </ul>
+          </div>
+          <div class="compare__col compare__col--owning">
+            <div class="compare__col-head">
+              If you own<span>Building your own wealth</span>
+            </div>
+            <ul class="compare__list">
+              <li>Monthly payment builds your wealth</li>
+              <li>You control the building</li>
+              <li>Fixed long-term financing</li>
+              <li>Stay as long as you want</li>
+              <li>Improvements you make benefit you</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 — PROPERTY TOUR -->
+    <section id="tour" aria-labelledby="tour-headline">
+      <div class="container">
+        <div class="tour__head">
+          <div class="eyebrow">
+            <span class="num">04</span><span class="dot">/</span><span>The building</span>
+          </div>
+          <h2 id="tour-headline">Take the side you need. Rent the other side out.</h2>
+          <p class="lead" style="margin-top: 20px;">
+            The 6,800 SF main unit is built out for clinical care. The 3,200 SF specialty unit can stay leased — its rent helps cover your mortgage.
+          </p>
+          <div class="measure" style="margin-top: 32px;">
+            <p style="font-size: var(--fs-body); line-height: 1.7;">
+              The building is set up as two independent units that share a structure. Each has its own entry, signage, and parking lot. You can occupy the larger 6,800 SF unit and keep the smaller unit leased to its current tenant — whose rent reduces your effective monthly payment.
+            </p>
+            <p style="font-size: var(--fs-body); line-height: 1.7; margin-top: 20px;">
+              Or take the whole building. Use the second unit for expansion, a service line you've wanted to add, or a partner practice. The optionality is yours.
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery-header">
+          <h3>Take a look inside</h3>
+          <a href="photos.html" class="gallery-header__link">View all photos →</a>
+        </div>
+
+        <div class="gallery">
+          <div class="image-slot" data-slot="EXTERIOR · FRONT ELEVATION · 1600×1200" data-aspect="4/3">
+            <img src="assets/exterior-front.jpg" alt="Front exterior of 577 Brookmeade." />
+          </div>
+          <div class="image-slot" data-slot="EXTERIOR · AERIAL · 1200×800" data-aspect="3/2">
+            <img src="assets/interior-clinical.png" alt="Interior clinical space." />
+          </div>
+          <div class="image-slot" data-slot="INTERIOR · CLINICAL · 1200×800" data-aspect="3/2">
+            <img src="assets/office.png" alt="Interior clinical space." />
+          </div>
+        </div>
+
+        <div class="gallery-extras">
+          <div class="image-slot" data-slot="INTERIOR · AQUATIC THERAPY · 1600×900" data-aspect="16/9">
+            <img src="assets/interior-aquatic.jpg" alt="Aquatic therapy pool." />
+          </div>
+          <div class="image-slot" data-slot="INTERIOR · 3,200 SF SPECIALTY UNIT · 1600×900" data-aspect="16/9">
+            <img src="assets/interior-specialty.jpg" alt="3,200 SF specialty unit." />
+          </div>
+          <div class="image-slot" data-slot="PARKING & SIGNAGE · 2400×900" data-aspect="21/9">
+            <img src="assets/parking-signage.jpg" alt="Parking and signage." />
+          </div>
+        </div>
+
+        <a href="photos.html" class="gallery-cta">
+          <span class="gallery-cta__label">See the full photo set</span>
+          <span class="gallery-cta__meta">All exteriors · interiors · drone footage · floor plans</span>
+          <span class="gallery-cta__arrow">→</span>
+        </a>
+
+        <div class="floorplan-block">
+          <div class="gallery-header">
+            <h3>One building, two units, two ways to use it</h3>
+            <span style="font-family: var(--mono); font-size: var(--fs-micro); color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase;">Floor plan</span>
+          </div>
+          <div class="image-slot image-slot--contain" data-slot="FLOOR PLAN · DIVISIBILITY DIAGRAM · 2000×1200" data-aspect="2/1">
+            <img src="assets/Floorplan Master 2D and 3D.jpg" alt="Annotated floor plan." />
+          </div>
+          <p class="floorplan-block__caption">
+            Independent entries · separate parking lots · shared structure.<br />
+            Occupy the 6,800 SF unit, lease out the 3,200 SF unit — or take the whole building.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 — BUILD-OUT VALUE -->
+    <section aria-labelledby="buildout-headline">
+      <div class="container">
+        <div class="buildout__head">
+          <div class="eyebrow">
+            <span class="num">05</span><span class="dot">/</span><span>What's already done</span>
+          </div>
+          <h2 id="buildout-headline">$400,000+ in medical build-out is already in place.</h2>
+          <p class="lead" style="margin-top: 20px;">
+            The work most owners pay for after closing? It's already done here.
+          </p>
+        </div>
+
+        <div class="buildout__body">
+          <p>When a medical practice builds out a new lease space, the typical cost runs $50 to $100 per square foot — and the timeline runs 4 to 8 months before the first patient walks in. That's $340,000 to $680,000 for a unit this size, plus half a year of paying rent on space you can't use yet.</p>
+          <p>This building was purpose-built as a medical clinic and has operated as one continuously. The medical plumbing is in. The treatment rooms are built. The aquatic therapy pool — rare and expensive to add — is operating. The pharmaceutical storage is insurance-certified. The HVAC supports clinical loads.</p>
+          <p>You don't pay for any of it. You don't wait for any of it. You walk in, get your license assigned, and see patients.</p>
+        </div>
+
+        <div class="cost-reveal" role="figure" aria-label="What you save by buying a built-out medical clinic versus building one">
+          <div class="cost-reveal__cell">
+            <div class="cost-reveal__label">Typical TI cost</div>
+            <div class="cost-reveal__value">$340–680K</div>
+            <p class="cost-reveal__sub">Per unit this size, at $50–$100/SF for medical fit-out</p>
+          </div>
+          <div class="cost-reveal__cell cost-reveal__cell--saved">
+            <div class="cost-reveal__label">What you skip</div>
+            <div class="cost-reveal__value">$400K+</div>
+            <p class="cost-reveal__sub">Medical build-out already in place. You don't pay for it. You don't wait for it.</p>
+          </div>
+          <div class="cost-reveal__cell">
+            <div class="cost-reveal__label">Time saved</div>
+            <div class="cost-reveal__value">4–8 mo</div>
+            <p class="cost-reveal__sub">No construction. No permit risk. No rent paid on space you can't use.</p>
+          </div>
+        </div>
+
+        <div class="buildout__gallery">
+          <div class="image-slot" data-slot="BUILD-OUT · TREATMENT ROOM · 1200×900" data-aspect="4/3">
+            <img src="assets/20260416_164835.jpg" alt="Built-out clinical treatment room with parallel bars, treatment tables, and rehabilitation equipment." />
+          </div>
+          <div class="image-slot" data-slot="BUILD-OUT · AQUATIC POOL · 1200×900" data-aspect="4/3">
+            <img src="assets/interior-aquatic2.jpg" alt="Aquatic therapy pool installed and operating." />
+          </div>
+          <div class="image-slot" data-slot="BUILD-OUT · SPECIALTY UNIT · 1200×900" data-aspect="4/3">
+            <img src="assets/20260416_165926.jpg" alt="Specialty unit interior with built-out casework and finished space." />
+          </div>
+        </div>
+        <p class="buildout__caption">Built for medicine, in active medical use today.</p>
+      </div>
+    </section>
+
+    <!-- 06 — LOCATION -->
+    <section aria-labelledby="location-headline">
+      <div class="container">
+        <div class="location__head">
+          <div class="eyebrow">
+            <span class="num">06</span><span class="dot">/</span><span>Where you'd be practicing</span>
+          </div>
+          <h2 id="location-headline">Your patient base is growing fast.</h2>
+          <p class="lead" style="margin-top: 20px;">
+            Crestview is the fastest-growing area of the Florida panhandle, and the growth is the kind that supports medical demand.
+          </p>
+        </div>
+
+        <div class="location__body">
+          <p>Crestview's population within a 30-minute drive is 78,276 — and that number is climbing. Over 6,000 new homes are approved or under construction nearby. A $1B advanced manufacturing campus is being built 7 minutes north of this property, which will bring thousands of new high-wage jobs over the next decade. Eglin Air Force Base and Hurlburt Field anchor a steady population of military families and retirees who use medical services year-round.</p>
+          <p>For a practice owner, that translates to a growing, stable patient base in a market where medical office space is hard to find. The submarket vacancy rate is 1.9% — meaning if you wait, the available options get even tighter.</p>
+        </div>
+
+        <div class="location__map">
+          <div class="image-slot image-slot--contain" data-slot="AREA MAP · CRESTVIEW · 1600×900" data-aspect="16/9">
+            <img src="assets/Area map.jpg" alt="Map of Crestview, FL showing the property in context with North Okaloosa Medical Center, Eglin AFB, and Williams International." />
+          </div>
+          <p class="location__map-caption">Crestview, FL — where the property sits in its market.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 — INCOME OPTION -->
+    <section aria-labelledby="income-headline">
+      <div class="container">
+        <div class="income__head">
+          <div class="eyebrow">
+            <span class="num">07</span><span class="dot">/</span><span>Built-in income</span>
+          </div>
+          <h2 id="income-headline">The other unit is already paying rent.</h2>
+          <p class="lead" style="margin-top: 20px;">
+            That income offsets your mortgage from Day 1 — if you want it to.
+          </p>
+        </div>
+
+        <div class="income__body">
+          <p>The 3,200 SF unit on the building has an existing tenant — a long-standing local business that pays current market rent. If you'd like to keep them, their rent goes directly toward reducing your monthly carry on the building. If you'd prefer to occupy the whole building yourself, they can be transitioned out under the terms of their lease.</p>
+          <p>The math is simple. You choose how much building you need, and the income from the other side helps the financing pencil.</p>
+        </div>
+
+        <div class="income-viz" role="figure" aria-label="Two units, one mortgage — income on one side helps cover the other">
+          <div class="income-viz__unit income-viz__unit--yours">
+            <div>
+              <div class="income-viz__unit-label">Your practice</div>
+              <div class="income-viz__unit-size">6,800 <span style="font-size: 0.5em; color: var(--muted); font-weight: 400;">SF</span></div>
+              <p class="income-viz__unit-name">Clinical unit · medical-licensed · aquatic therapy infrastructure</p>
+            </div>
+            <div class="income-viz__unit-meta">
+              You occupy this side
+              <strong>The space you actually need</strong>
+            </div>
+          </div>
+          <div class="income-viz__unit income-viz__unit--leased">
+            <div>
+              <div class="income-viz__unit-label">Currently leased</div>
+              <div class="income-viz__unit-size">3,200 <span style="font-size: 0.5em; color: var(--muted); font-weight: 400;">SF</span></div>
+              <p class="income-viz__unit-name">Specialty unit · independent entry, signage, parking</p>
+            </div>
+            <div class="income-viz__unit-meta">
+              Existing tenant
+              <strong>~$4,800/mo (est.) toward your mortgage</strong>
+            </div>
+          </div>
+        </div>
+        <p class="income-viz__caption">Two units. One mortgage. Income on one side helps cover the other.</p>
+      </div>
+    </section>
+
+    <!-- 08 — FORM -->
+    <section id="contact" aria-labelledby="cta-headline">
+      <div class="container">
+        <div class="cta__head">
+          <div class="eyebrow">
+            <span class="num">08</span><span class="dot">/</span><span>Next step</span>
+          </div>
+          <h2 id="cta-headline">See what owning this would actually cost you.</h2>
+          <p class="lead" style="margin-top: 20px;">
+            Send us a few details. We'll send back an estimated monthly payment, the full ownership breakdown, and an introduction to an SBA-experienced lender.
+          </p>
+        </div>
+
+        <div class="form-grid">
+          <div>
+            <form id="owner-inquiry" action="/api/inquiry-owner" method="POST" novalidate>
+              <p style="font-size: var(--fs-body); line-height: 1.6; color: var(--paper-dim); max-width: 56ch; margin-bottom: 8px;">
+                No commitment. No hard sell. This is information you should have before deciding whether to lease again or own for the first time.
+              </p>
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="f-name">Your name <span class="req">*</span></label>
+                  <input id="f-name" name="name" type="text" required placeholder="Dr. Jane Smith" autocomplete="name" />
+                </div>
+                <div class="field">
+                  <label for="f-practice">Practice or specialty <span class="req">*</span></label>
+                  <input id="f-practice" name="practice" type="text" required placeholder="e.g., Family practice, PT, dental" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="f-email">Email <span class="req">*</span></label>
+                  <input id="f-email" name="email" type="email" required placeholder="you@yourpractice.com" autocomplete="email" />
+                </div>
+                <div class="field">
+                  <label for="f-phone">Phone <span class="req">*</span></label>
+                  <input id="f-phone" name="phone" type="tel" required placeholder="(555) 555-5555" autocomplete="tel" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="f-rent">Current monthly rent</label>
+                  <input id="f-rent" name="currentRent" type="text" placeholder="$12,000 (approx)" />
+                </div>
+                <div class="field">
+                  <label for="f-timing">Timing <span class="req">*</span></label>
+                  <select id="f-timing" name="timing" required>
+                    <option value="">Select...</option>
+                    <option value="now">Ready now</option>
+                    <option value="lease-ending">Lease ending in 12 months</option>
+                    <option value="exploring">Exploring — no rush</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="f-notes">Anything else we should know?</label>
+                <textarea id="f-notes" name="notes" placeholder="Questions about SBA financing, partner ownership, timing, etc."></textarea>
+              </div>
+
+              <div class="form-submit">
+                <button type="submit" class="btn">
+                  Send me the breakdown <span class="arrow">→</span>
+                </button>
+              </div>
+            </form>
+
+            <div id="form-confirmation" class="form-confirmation" role="status" aria-live="polite">
+              <h3>Thanks. Breakdown incoming.</h3>
+              <p>The listing team will send your estimated payment, the full ownership breakdown, and an SBA lender introduction within one business day.</p>
+              <p>If you'd rather talk now, <a href="#listing-team" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">reach either listing agent directly</a>.</p>
+            </div>
+          </div>
+
+          <aside class="form-reassurance">
+            <h3>What you'll receive</h3>
+            <p>An estimated monthly payment specific to your situation, the full ownership pro forma (including tax treatment of mortgage interest and depreciation), and a no-pressure introduction to an SBA-experienced lender.</p>
+            <p>Sent within one business day. No follow-up unless you ask for it.</p>
+            <div class="form-reassurance__cta">
+              <div class="form-reassurance__cta-label">Prefer to talk first?</div>
+              <a href="#listing-team" class="btn btn--ghost form-reassurance__btn">
+                See broker contacts <span class="arrow">↓</span>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="eyebrow" id="listing-team">
+        <span class="num">09</span><span class="dot">/</span><span>Listing team</span>
+      </div>
+
+      <div class="brokers">
+        <div class="broker">
+          <div class="broker__head">
+            <div class="broker__photo">
+              <div class="image-slot" data-slot="TODD · HEADSHOT · 600×600" data-aspect="1/1">
+                <img src="assets/Todd Siegrist Headshot 2026.jpg" alt="Todd Siegrist, listing broker" />
+              </div>
+            </div>
+            <div>
+              <h3 class="broker__name">Todd Siegrist</h3>
+              <div class="broker__role">Listing Broker</div>
+            </div>
+          </div>
+          <p class="broker__bio">Todd Siegrist is a Real Estate Strategist serving the Emerald Coast from Pensacola through 30A. He specializes in AI-augmented market analysis, buyer psychology and targeted marketing campaigns. Buyers, sellers, and the agents he trains all get the same standard: rigor most clients have never experienced, delivered by someone who actually answers his texts.</p>
+          <div class="broker__contact">
+            <a href="tel:+18507970627">(850) 797-0627</a>
+            <a href="mailto:todd@toddrocks.com">todd@toddrocks.com</a>
+          </div>
+          <div class="broker__brokerage">
+            <div class="broker__brokerage-label">Brokerage</div>
+            <div class="broker__brokerage-logo">
+              <img src="assets/dw-logo-white.png" alt="Dalton Wade Real Estate Group" />
+            </div>
+            <p class="broker__brokerage-meta">
+              Dalton Wade Real Estate Group · Licensed in Florida · SL3398226
+            </p>
+          </div>
+        </div>
+
+        <div class="broker">
+          <div class="broker__head">
+            <div class="broker__photo">
+              <div class="image-slot" data-slot="DENNIS · HEADSHOT · 600×600" data-aspect="1/1">
+                <img src="assets/dennis 150 head.jpg" alt="Dennis Fortenberry, co-listing broker" />
+              </div>
+            </div>
+            <div>
+              <h3 class="broker__name">Dennis Fortenberry</h3>
+              <div class="broker__role">Co-Listing Broker</div>
+            </div>
+          </div>
+          <p class="broker__bio">Dennis came to NBI from the world of luxury residential resort development on the Gulf Coast — beginning at Sandestin Golf and Beach Resort and most recently master-planning thousands of condominium and hotel units across the region. He now oversees new business development on NBI's executive team, leading the firm's evolution into a national commercial real estate player.</p>
+          <div class="broker__contact">
+            <a href="tel:+18504283688">(850) 428-3688</a>
+            <a href="mailto:dennis@nbiproperties.com">dennis@nbiproperties.com</a>
+          </div>
+          <div class="broker__brokerage">
+            <div class="broker__brokerage-label">Brokerage</div>
+            <div class="broker__brokerage-logo">
+              <img src="assets/nbilogo-7.png" alt="NBI Properties" />
+            </div>
+            <p class="broker__brokerage-meta">
+              NBI Properties · Licensed in Florida · BK627640
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="colophon">
+        <div class="left">
+          577 Brookmeade Drive · Crestview, FL 32536<br />
+          Owner-user opportunity · SBA 504 eligible
+        </div>
+        <div>© 2026 · All rights reserved</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       CALCULATOR + FORM
+       ============================================ -->
+  <script>
+    (function () {
+      // ----- Calculator -----
+      const priceInput = document.getElementById('price-input');
+      const rateInput  = document.getElementById('rate-input');
+      const downRadios = document.querySelectorAll('input[name="down"]');
+      const priceLabel = document.getElementById('price-label');
+      const rateLabel  = document.getElementById('rate-label');
+      const downLabel  = document.getElementById('down-label');
+      const paymentOut = document.getElementById('payment-output');
+      const downOut    = document.getElementById('down-output');
+      const tenantOut  = document.getElementById('tenant-output');
+      const netOut     = document.getElementById('net-output');
+      const heroPmt    = document.getElementById('hero-pmt');
+
+      function fmt(n) {
+        return '$' + Math.round(n).toLocaleString('en-US');
+      }
+      function fmtMo(n) {
+        return fmt(n) + '/mo';
+      }
+
+      // Simplified blended SBA 504 — single amortization at the blended rate over 25 years.
+      // (In reality: 50% bank, 40% SBA debenture, 10% borrower equity, different terms.
+      // For a directional estimate this is more than accurate enough.)
+      function calc() {
+        const price = parseFloat(priceInput.value);
+        const rate  = parseFloat(rateInput.value) / 100;
+        const downPct = parseFloat(document.querySelector('input[name="down"]:checked').value);
+
+        const downAmt = price * downPct;
+        const loanAmt = price - downAmt;
+        const months  = 25 * 12;
+        const monthlyRate = rate / 12;
+        const pmt = loanAmt * (monthlyRate * Math.pow(1 + monthlyRate, months))
+                  / (Math.pow(1 + monthlyRate, months) - 1);
+
+        // Rough tenant rent — assume 3,200 SF at $1.50/SF NNN = $4,800/mo
+        const tenantRent = 4800;
+        const netCarry = pmt - tenantRent;
+
+        priceLabel.textContent = fmt(price);
+        rateLabel.textContent  = (rate * 100).toFixed(1) + '%';
+        downLabel.textContent  = (downPct * 100).toFixed(0) + '%';
+
+        paymentOut.textContent = fmt(pmt);
+        downOut.textContent    = fmt(downAmt);
+        tenantOut.textContent  = '–' + fmtMo(tenantRent);
+        netOut.textContent     = fmtMo(netCarry);
+
+        // Keep hero tile in sync
+        if (heroPmt) heroPmt.textContent = '~' + fmt(pmt);
+      }
+
+      priceInput.addEventListener('input', calc);
+      rateInput.addEventListener('input', calc);
+      downRadios.forEach(r => r.addEventListener('change', calc));
+      calc();
+
+      // ----- Form submit -----
+      const form = document.getElementById('owner-inquiry');
+      const confirmation = document.getElementById('form-confirmation');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          if (!form.checkValidity()) { form.reportValidity(); return; }
+          // TODO: POST form data to your endpoint
+          form.style.display = 'none';
+          confirmation.classList.add('active');
+          confirmation.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>
