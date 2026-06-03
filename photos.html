@@ -247,6 +247,8 @@
   .gallery-section {
     padding: clamp(56px, 6vw, 96px) 0 clamp(40px, 5vw, 72px);
     border-bottom: 1px solid var(--rule);
+    /* Offset for sticky header + cat-nav so anchor links don't get hidden */
+    scroll-margin-top: 140px;
   }
   .gallery-section__head {
     display: flex;
@@ -547,7 +549,7 @@
         </div>
         <h1>577 Brookmeade · the building, end to end.</h1>
         <p class="page-head__lead">
-          Drone, exterior, every interior space, the aquatic therapy unit, parking, signage, and floor plans. Click any image to view full-size.
+          Drone, exterior, every interior space, the aquatic therapy unit, and the floor plan. Click any image to view full-size.
         </p>
       </div>
     </section>
@@ -559,11 +561,10 @@
       <div class="container cat-nav__inner">
         <a href="#drone">Drone <span class="cat-nav__count">04</span></a>
         <a href="#exterior">Exterior <span class="cat-nav__count">06</span></a>
-        <a href="#clinical">Clinical Interior <span class="cat-nav__count">08</span></a>
+        <a href="#clinical">Clinical Interior <span class="cat-nav__count">07</span></a>
         <a href="#aquatic">Aquatic Therapy <span class="cat-nav__count">04</span></a>
-        <a href="#specialty">Specialty Unit <span class="cat-nav__count">04</span></a>
-        <a href="#site">Parking + Signage <span class="cat-nav__count">04</span></a>
-        <a href="#plans">Floor Plans <span class="cat-nav__count">03</span></a>
+        <a href="#specialty">Specialty Unit <span class="cat-nav__count">05</span></a>
+        <a href="#plans">Floor Plan <span class="cat-nav__count">01</span></a>
       </div>
     </nav>
 
@@ -577,10 +578,18 @@
           <span class="gallery-section__meta">04 photos · aerial</span>
         </div>
         <div class="mosaic">
-          <div class="image-slot m-span-12" data-slot="DRONE · HERO AERIAL · 2400×1080" data-aspect="21/9" data-caption="Drone · hero aerial"></div>
-          <div class="image-slot m-span-6"  data-slot="DRONE · NORTH APPROACH · 1600×900"  data-aspect="16/9" data-caption="Drone · north approach"></div>
-          <div class="image-slot m-span-6"  data-slot="DRONE · SOUTH APPROACH · 1600×900"  data-aspect="16/9" data-caption="Drone · south approach"></div>
-          <div class="image-slot m-span-12" data-slot="DRONE · NOMC ADJACENCY · 2400×900"  data-aspect="21/9" data-caption="Drone · NOMC adjacency"></div>
+          <div class="image-slot m-span-12" data-slot="DRONE · NOMC ADJACENCY · 2400×1080" data-aspect="21/9" data-caption="Drone · NOMC adjacency">
+            <img src="assets/Moore Media_50marker.jpg" alt="Drone view showing 577 Brookmeade in context with North Okaloosa Medical Center." />
+          </div>
+          <div class="image-slot m-span-6" data-slot="DRONE · 1600×900" data-aspect="16/9" data-caption="Drone">
+            <img src="assets/Moore Media_4.jpg" alt="Drone view of the property." />
+          </div>
+          <div class="image-slot m-span-6" data-slot="DRONE · 1600×900" data-aspect="16/9" data-caption="Drone">
+            <img src="assets/Moore Media_9.jpg" alt="Drone view of the property." />
+          </div>
+          <div class="image-slot m-span-12" data-slot="DRONE · HERO AERIAL · 2400×900" data-aspect="21/9" data-caption="Drone · hero aerial">
+            <img src="assets/hero-drone-aerial.jpg" alt="Aerial drone view of 577 Brookmeade Drive in context." style="object-position: center top;" />
+          </div>
         </div>
       </div>
     </section>
@@ -595,12 +604,24 @@
           <span class="gallery-section__meta">06 photos · ground level</span>
         </div>
         <div class="mosaic">
-          <div class="image-slot m-span-8" data-slot="EXTERIOR · FRONT ELEVATION · 1600×1200" data-aspect="4/3" data-caption="Exterior · front elevation"></div>
-          <div class="image-slot m-span-4" data-slot="EXTERIOR · ENTRY DETAIL · 800×1200"     data-aspect="2/3" data-caption="Exterior · entry detail"></div>
-          <div class="image-slot m-span-4" data-slot="EXTERIOR · SIDE ELEVATION · 1200×800"   data-aspect="3/2" data-caption="Exterior · side elevation"></div>
-          <div class="image-slot m-span-4" data-slot="EXTERIOR · REAR ELEVATION · 1200×800"   data-aspect="3/2" data-caption="Exterior · rear elevation"></div>
-          <div class="image-slot m-span-4" data-slot="EXTERIOR · SIGNAGE · 1200×800"          data-aspect="3/2" data-caption="Exterior · signage"></div>
-          <div class="image-slot m-span-12" data-slot="EXTERIOR · STREET VIEW · 2400×900"     data-aspect="21/9" data-caption="Exterior · street view"></div>
+          <div class="image-slot m-span-8" data-slot="EXTERIOR · 1600×1200" data-aspect="4/3" data-caption="Exterior">
+            <img src="assets/Moore Media_38.jpg" alt="Front exterior of the building, ground level." />
+          </div>
+          <div class="image-slot m-span-4" data-slot="EXTERIOR · 800×1200" data-aspect="2/3" data-caption="Exterior">
+            <img src="assets/Moore Media_29.jpg" alt="Exterior of the building." />
+          </div>
+          <div class="image-slot m-span-4" data-slot="EXTERIOR · 1200×800" data-aspect="3/2" data-caption="Exterior · front corner">
+            <img src="assets/Front corner low drone.png" alt="Front corner low drone view." />
+          </div>
+          <div class="image-slot m-span-4" data-slot="EXTERIOR · 1200×800" data-aspect="3/2" data-caption="Exterior">
+            <img src="assets/20260416_164356.jpg" alt="Exterior view of the property." />
+          </div>
+          <div class="image-slot m-span-4" data-slot="EXTERIOR · 1200×800" data-aspect="3/2" data-caption="Exterior">
+            <img src="assets/20260416_163036.jpg" alt="Exterior view of the property." />
+          </div>
+          <div class="image-slot m-span-12" data-slot="EXTERIOR · TOP-DOWN · 2400×900" data-aspect="21/9" data-caption="Exterior · top-down">
+            <img src="assets/top-down.jpg" alt="Top-down aerial view of the property." />
+          </div>
         </div>
       </div>
     </section>
@@ -612,17 +633,30 @@
       <div class="container">
         <div class="gallery-section__head">
           <h2 class="gallery-section__title">Clinical Interior</h2>
-          <span class="gallery-section__meta">08 photos · 6,800 SF unit</span>
+          <span class="gallery-section__meta">07 photos · 6,800 SF unit</span>
         </div>
         <div class="mosaic">
-          <div class="image-slot m-span-6" data-slot="CLINICAL · WAITING ROOM · 1600×1200"      data-aspect="4/3" data-caption="Clinical · waiting room"></div>
-          <div class="image-slot m-span-6" data-slot="CLINICAL · RECEPTION · 1600×1200"         data-aspect="4/3" data-caption="Clinical · reception"></div>
-          <div class="image-slot m-span-4" data-slot="CLINICAL · TREATMENT ROOM 1 · 1200×800"   data-aspect="3/2" data-caption="Clinical · treatment room"></div>
-          <div class="image-slot m-span-4" data-slot="CLINICAL · TREATMENT ROOM 2 · 1200×800"   data-aspect="3/2" data-caption="Clinical · treatment room"></div>
-          <div class="image-slot m-span-4" data-slot="CLINICAL · TREATMENT ROOM 3 · 1200×800"   data-aspect="3/2" data-caption="Clinical · treatment room"></div>
-          <div class="image-slot m-span-8" data-slot="CLINICAL · CORRIDOR · 1600×900"           data-aspect="16/9" data-caption="Clinical · corridor"></div>
-          <div class="image-slot m-span-4" data-slot="CLINICAL · CASEWORK DETAIL · 800×1200"    data-aspect="2/3" data-caption="Clinical · casework detail"></div>
-          <div class="image-slot m-span-12" data-slot="CLINICAL · PHARMACY ROOM · 2000×1000"    data-aspect="2/1" data-caption="Clinical · pharmacy room"></div>
+          <div class="image-slot m-span-6" data-slot="CLINICAL · 1600×1200" data-aspect="4/3" data-caption="Clinical interior">
+            <img src="assets/20260416_164440_2.jpg" alt="Clinical interior space." />
+          </div>
+          <div class="image-slot m-span-6" data-slot="CLINICAL · RECEPTION · 1600×1200" data-aspect="4/3" data-caption="Clinical · reception">
+            <img src="assets/reception.png" alt="Clinical reception area." />
+          </div>
+          <div class="image-slot m-span-4" data-slot="CLINICAL · 1200×800" data-aspect="3/2" data-caption="Clinical interior">
+            <img src="assets/20260416_165941.jpg" alt="Clinical interior space." />
+          </div>
+          <div class="image-slot m-span-4" data-slot="CLINICAL · 1200×800" data-aspect="3/2" data-caption="Clinical interior">
+            <img src="assets/corner.png" alt="Clinical interior corner view." />
+          </div>
+          <div class="image-slot m-span-4" data-slot="CLINICAL · 1200×800" data-aspect="3/2" data-caption="Clinical interior">
+            <img src="assets/20260416_164725.jpg" alt="Clinical interior space." />
+          </div>
+          <div class="image-slot m-span-12" data-slot="CLINICAL · CORRIDOR · 2000×900" data-aspect="21/9" data-caption="Clinical · corridor">
+            <img src="assets/20260416_164614.jpg" alt="Clinical corridor / treatment area." />
+          </div>
+          <div class="image-slot m-span-12" data-slot="CLINICAL · 2000×1000" data-aspect="2/1" data-caption="Clinical interior">
+            <img src="assets/interior-clinical.png" alt="Clinical interior treatment space." />
+          </div>
         </div>
       </div>
     </section>
@@ -637,10 +671,18 @@
           <span class="gallery-section__meta">04 photos · pool + ADA infrastructure</span>
         </div>
         <div class="mosaic">
-          <div class="image-slot m-span-12" data-slot="AQUATIC · POOL FULL VIEW · 2400×1080"   data-aspect="21/9" data-caption="Aquatic · pool"></div>
-          <div class="image-slot m-span-6"  data-slot="AQUATIC · ADA ACCESS · 1600×900"        data-aspect="16/9" data-caption="Aquatic · ADA access"></div>
-          <div class="image-slot m-span-6"  data-slot="AQUATIC · EQUIPMENT ROOM · 1600×900"    data-aspect="16/9" data-caption="Aquatic · equipment room"></div>
-          <div class="image-slot m-span-12" data-slot="AQUATIC · CHANGING / LOCKERS · 2400×900" data-aspect="21/9" data-caption="Aquatic · changing area"></div>
+          <div class="image-slot m-span-12" data-slot="AQUATIC · POOL FULL VIEW · 2400×1080" data-aspect="21/9" data-caption="Aquatic therapy · pool">
+            <img src="assets/interior-aquatic2.jpg" alt="Aquatic therapy pool — full view." />
+          </div>
+          <div class="image-slot m-span-6" data-slot="AQUATIC · 1600×900" data-aspect="16/9" data-caption="Aquatic therapy">
+            <img src="assets/interior-aquatic.jpg" alt="Aquatic therapy pool." />
+          </div>
+          <div class="image-slot m-span-6" data-slot="AQUATIC · 1600×900" data-aspect="16/9" data-caption="Aquatic therapy">
+            <img src="assets/20260416_165343.jpg" alt="Aquatic therapy area." />
+          </div>
+          <div class="image-slot m-span-12" data-slot="AQUATIC · 2400×900" data-aspect="21/9" data-caption="Aquatic therapy">
+            <img src="assets/20260416_165404.jpg" alt="Aquatic therapy area." />
+          </div>
         </div>
       </div>
     </section>
@@ -652,31 +694,24 @@
       <div class="container">
         <div class="gallery-section__head">
           <h2 class="gallery-section__title">Specialty Unit</h2>
-          <span class="gallery-section__meta">04 photos · 3,200 SF · independently accessed</span>
+          <span class="gallery-section__meta">05 photos · 3,200 SF · independently accessed</span>
         </div>
         <div class="mosaic">
-          <div class="image-slot m-span-8" data-slot="SPECIALTY · ENTRY · 1600×900"          data-aspect="16/9" data-caption="Specialty unit · entry"></div>
-          <div class="image-slot m-span-4" data-slot="SPECIALTY · RECEPTION · 800×1200"      data-aspect="2/3" data-caption="Specialty unit · reception"></div>
-          <div class="image-slot m-span-6" data-slot="SPECIALTY · TREATMENT BAY · 1600×1200" data-aspect="4/3" data-caption="Specialty unit · treatment bay"></div>
-          <div class="image-slot m-span-6" data-slot="SPECIALTY · UTILITY · 1600×1200"       data-aspect="4/3" data-caption="Specialty unit · utility"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================
-         PARKING + SIGNAGE
-         ============================================ -->
-    <section class="gallery-section" id="site">
-      <div class="container">
-        <div class="gallery-section__head">
-          <h2 class="gallery-section__title">Parking + Signage</h2>
-          <span class="gallery-section__meta">04 photos · two lots · ~XX spaces total</span>
-        </div>
-        <div class="mosaic">
-          <div class="image-slot m-span-6" data-slot="SITE · PRIMARY PARKING LOT · 1600×900"   data-aspect="16/9" data-caption="Primary parking lot"></div>
-          <div class="image-slot m-span-6" data-slot="SITE · SECONDARY PARKING LOT · 1600×900" data-aspect="16/9" data-caption="Secondary parking lot"></div>
-          <div class="image-slot m-span-6" data-slot="SITE · MAIN SIGNAGE · 1200×800"          data-aspect="3/2" data-caption="Main signage"></div>
-          <div class="image-slot m-span-6" data-slot="SITE · DIRECTIONAL SIGNAGE · 1200×800"   data-aspect="3/2" data-caption="Directional signage"></div>
+          <div class="image-slot m-span-12" data-slot="SPECIALTY · 2400×1080" data-aspect="21/9" data-caption="Specialty unit">
+            <img src="assets/20260416_165613.jpg" alt="Specialty unit interior." />
+          </div>
+          <div class="image-slot m-span-6" data-slot="SPECIALTY · 1600×900" data-aspect="16/9" data-caption="Specialty unit">
+            <img src="assets/interior-specialty.jpg" alt="Specialty unit interior." />
+          </div>
+          <div class="image-slot m-span-6" data-slot="SPECIALTY · 1600×900" data-aspect="16/9" data-caption="Specialty unit">
+            <img src="assets/20260416_165853.jpg" alt="Specialty unit interior." />
+          </div>
+          <div class="image-slot m-span-6" data-slot="SPECIALTY · 1600×900" data-aspect="16/9" data-caption="Specialty unit">
+            <img src="assets/20260416_165900.jpg" alt="Specialty unit interior." />
+          </div>
+          <div class="image-slot m-span-6" data-slot="SPECIALTY · 1600×900" data-aspect="16/9" data-caption="Specialty unit">
+            <img src="assets/20260416_165926.jpg" alt="Specialty unit interior." />
+          </div>
         </div>
       </div>
     </section>
@@ -687,13 +722,13 @@
     <section class="gallery-section" id="plans">
       <div class="container">
         <div class="gallery-section__head">
-          <h2 class="gallery-section__title">Floor Plans</h2>
-          <span class="gallery-section__meta">03 plans · 2D + 3D + divisibility</span>
+          <h2 class="gallery-section__title">Floor Plan</h2>
+          <span class="gallery-section__meta">01 plan · 2D + 3D + divisibility</span>
         </div>
         <div class="mosaic">
-          <div class="image-slot m-span-12" data-slot="PLAN · MASTER FLOOR PLAN · 2400×1200" data-aspect="2/1" data-caption="Master floor plan"></div>
-          <div class="image-slot m-span-6"  data-slot="PLAN · CLINICAL UNIT DETAIL · 1600×1200" data-aspect="4/3" data-caption="Clinical unit detail"></div>
-          <div class="image-slot m-span-6"  data-slot="PLAN · SPECIALTY UNIT DETAIL · 1600×1200" data-aspect="4/3" data-caption="Specialty unit detail"></div>
+          <div class="image-slot m-span-12 image-slot--contain" data-slot="PLAN · MASTER FLOOR PLAN · 2400×1200" data-aspect="2/1" data-caption="Master floor plan">
+            <img src="assets/Floorplan Master 2D and 3D.jpg" alt="Annotated full-building floor plan showing both units, entries, and parking." />
+          </div>
         </div>
       </div>
     </section>

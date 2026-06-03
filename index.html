@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Off-market 10,000 SF medical asset in Crestview, FL. Operational in 90 days. The Crestview gap in your panhandle network." />
+<meta name="description" content="Off-market 10,000 SF medical asset in Crestview, FL. Fully operational in 180 days. The Crestview gap in your panhandle network." />
 <title>577 Brookmeade · Crestview, FL · Platform Acquisition</title>
 
 <link rel="icon" href="assets/faviconwhite.png" type="image/png" />
@@ -178,6 +178,16 @@
       );
   }
   .image-slot img { width: 100%; height: 100%; object-fit: cover; }
+  /* Anchor-wrapped slots — make them behave as block + subtle hover */
+  a.image-slot {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+  a.image-slot img { transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1); }
+  a.image-slot:hover img,
+  a.image-slot:focus-visible img { transform: scale(1.025); }
   .image-slot--bottom img { object-position: center 78%; }
   .image-slot--top img    { object-position: center 22%; }
   .image-slot--right img  { object-position: right center; }
@@ -1453,6 +1463,63 @@
   }
   .skip-link:focus { top: 12px; }
 
+  /* ============================================
+     PAGE SWITCHER — audience-version banner above header
+     ============================================ */
+  .page-switcher {
+    background: var(--ink-2);
+    border-bottom: 1px solid var(--rule);
+    padding: 12px 0;
+    font-family: var(--mono);
+    font-size: var(--fs-micro);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 51;
+  }
+  .page-switcher__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .page-switcher__current {
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .page-switcher__current strong {
+    color: var(--paper);
+    font-weight: 500;
+  }
+  .page-switcher__dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .page-switcher__alt {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+  }
+  .page-switcher__alt:hover,
+  .page-switcher__alt:focus-visible {
+    color: var(--accent-2);
+    border-bottom-color: currentColor;
+    outline: none;
+  }
+  @media (max-width: 640px) {
+    .page-switcher { padding: 10px 0; }
+    .page-switcher__current { font-size: 11px; }
+    .page-switcher__alt { font-size: 11px; }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
       animation-duration: 0.01ms !important;
@@ -1465,6 +1532,19 @@
 
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- PAGE SWITCHER -->
+  <div class="page-switcher" aria-label="Audience version">
+    <div class="container page-switcher__inner">
+      <span class="page-switcher__current">
+        <span class="page-switcher__dot" aria-hidden="true"></span>
+        Viewing: <strong>Investor &amp; platform</strong>
+      </span>
+      <a href="owner.html" class="page-switcher__alt">
+        Switch to practice owner view →
+      </a>
+    </div>
+  </div>
 
   <!-- ============================================
        HEADER
@@ -1496,8 +1576,8 @@
             <span class="num">01</span><span class="dot">/</span><span>Off-market opportunity · Crestview, FL</span>
           </div>
           <h1 id="hero-headline" class="hero__headline">
-            Skip 18 months of construction.<br />
-            <em>NWFL footprint, operational in 90 days.</em>
+            Skip 24 months of planning and construction.<br />
+            <em>Fully operational in 180 days in the tightest submarket in the panhandle.</em>
           </h1>
           <p class="hero__sub">
             Turnkey 10,000 SF medical asset directly across from North Okaloosa Medical Center, in the tightest healthcare submarket in the Florida panhandle.
@@ -1571,7 +1651,7 @@
 
         <div class="thesis__grid">
           <div class="thesis__body">
-            <p>The Williams International campus at Shoal River Ranch is not a speculative announcement. It is a $1B advanced aviation manufacturing facility under construction 7 minutes from this property, anchoring Florida's largest industrial park — 10,500 acres of state-supported, fully-zoned industrial land. State and regional projections call for 4,000+ direct high-wage manufacturing jobs over the next 10–15 years, plus the supplier and ancillary employment that follows.</p>
+            <p>The Williams International campus at Shoal River Ranch Industrial Park is not a speculative announcement. It is a $1B advanced aviation manufacturing facility under construction 7 minutes from this property, anchoring Florida's largest industrial park — 10,500 acres of state-supported, fully-zoned industrial land. State and regional projections call for 4,000+ direct high-wage manufacturing jobs over the next 10–15 years, plus the supplier and ancillary employment that follows.</p>
 
             <p>That job creation is landing on top of a residential pipeline already in motion: 6,387 approved or under-construction units across single-family, townhome, and multifamily product. The FDOT bypass system — Crestview's first complete loop infrastructure — is reshaping which commercial corridors capture this growth. The bypass interchanges at Crab Apple, Arena, and East SR-85 will define the next generation of highway-commercial value in Okaloosa County.</p>
 
@@ -1579,9 +1659,9 @@
 
             <p>The result: Crestview MOB submarket vacancy compressed to 1.9% while the surrounding metros (Pensacola, Fort Walton, Panama City) carry 4%+ vacancy. There is no comparable asset on the market.</p>
 
-            <a href="#" class="resource">
-              Shoal River Ranch — full development report
-              <span class="filetype">PDF · 4.2MB</span>
+            <a href="assets/Okaloosa County Shoal River Ranch Economic Narrative.pdf" class="resource" target="_blank" rel="noopener">
+              Shoal River Ranch Industrial Park — full development report
+              <span class="filetype">PDF</span>
             </a>
           </div>
 
@@ -1596,7 +1676,7 @@
                   <div class="demand-stack__row-mark">01</div>
                   <div class="demand-stack__row-label">Adjacent capital</div>
                   <div class="demand-stack__row-value">$1B<span class="demand-stack__row-unit">PRIVATE</span></div>
-                  <p class="demand-stack__row-context">Williams International advanced aviation campus · Shoal River Ranch · 7 minutes north.</p>
+                  <p class="demand-stack__row-context">Williams International advanced aviation campus · Shoal River Ranch Industrial Park · 7 minutes north.</p>
                 </div>
                 <div class="demand-stack__row">
                   <div class="demand-stack__row-mark">02</div>
@@ -1782,10 +1862,10 @@
           </p>
           <div class="measure" style="margin-top: 32px;">
             <p style="font-size: var(--fs-body); line-height: 1.7;">
-              The building was purpose-built for outpatient medical use and currently operates under that exact designation. The 6,800 SF primary unit houses clinical treatment space, pharmaceutical-rated storage, medical-grade plumbing, and an aquatic therapy pool — an infrastructure footprint that would cost $400K+ and 12–18 months to replicate. The 3,200 SF specialty unit operates with independent ingress, signage, and parking.
+              The building was purpose-built for outpatient medical use and currently operates under that exact designation. The 6,800 SF primary unit houses clinical treatment space, medical-grade plumbing, and an aquatic therapy pool — an infrastructure footprint that would cost $400K+ and 12–18 months to replicate. The 3,200 SF specialty unit operates with independent ingress, signage, and parking.
             </p>
             <p style="font-size: var(--fs-body); line-height: 1.7; margin-top: 20px;">
-              The 2023 roof, ongoing maintenance program, and operational HVAC eliminate the deferred capex exposure that typically prices into older medical real estate. The result is a Day 1 operational platform — your team walks in, certifies, and opens.
+              An ongoing maintenance program and operational HVAC eliminate the deferred capex exposure that typically prices into older medical real estate. The result is a Day 1 operational platform — your team walks in, certifies, and opens.
             </p>
           </div>
         </div>
@@ -1796,27 +1876,27 @@
         </div>
 
         <div class="gallery">
-          <div class="image-slot" data-slot="EXTERIOR · FRONT ELEVATION · 1600×1200" data-aspect="4/3">
+          <a href="photos.html#exterior" class="image-slot" data-slot="EXTERIOR · FRONT ELEVATION · 1600×1200" data-aspect="4/3">
             <img src="assets/exterior-front.jpg" alt="Front exterior of 577 Brookmeade." />
-          </div>
-          <div class="image-slot" data-slot="EXTERIOR · AERIAL · 1200×800" data-aspect="3/2">
+          </a>
+          <a href="photos.html#clinical" class="image-slot" data-slot="EXTERIOR · AERIAL · 1200×800" data-aspect="3/2">
             <img src="assets/interior-clinical.png" alt="Interior clinical space." />
-          </div>
-          <div class="image-slot" data-slot="INTERIOR · CLINICAL · 1200×800" data-aspect="3/2">
+          </a>
+          <a href="photos.html#clinical" class="image-slot" data-slot="INTERIOR · CLINICAL · 1200×800" data-aspect="3/2">
             <img src="assets/office.png" alt="Interior clinical space." />
-          </div>
+          </a>
         </div>
 
         <div class="gallery-extras">
-          <div class="image-slot" data-slot="INTERIOR · AQUATIC THERAPY · 1600×900" data-aspect="16/9">
+          <a href="photos.html#aquatic" class="image-slot" data-slot="INTERIOR · AQUATIC THERAPY · 1600×900" data-aspect="16/9">
             <img src="assets/interior-aquatic.jpg" alt="Aquatic therapy pool." />
-          </div>
-          <div class="image-slot" data-slot="INTERIOR · 3,200 SF SPECIALTY UNIT · 1600×900" data-aspect="16/9">
+          </a>
+          <a href="photos.html#specialty" class="image-slot" data-slot="INTERIOR · 3,200 SF SPECIALTY UNIT · 1600×900" data-aspect="16/9">
             <img src="assets/interior-specialty.jpg" alt="3,200 SF specialty unit." />
-          </div>
-          <div class="image-slot" data-slot="PARKING & SIGNAGE · 2400×900" data-aspect="21/9">
+          </a>
+          <a href="photos.html#exterior" class="image-slot" data-slot="PARKING & SIGNAGE · 2400×900" data-aspect="21/9">
             <img src="assets/parking-signage.jpg" alt="Parking and signage." />
-          </div>
+          </a>
         </div>
 
         <a href="photos.html" class="gallery-cta">
@@ -1830,9 +1910,9 @@
             <h3>One building, two units, two ways to use it</h3>
             <span style="font-family: var(--mono); font-size: var(--fs-micro); color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase;">Floor plan</span>
           </div>
-          <div class="image-slot image-slot--contain" data-slot="FLOOR PLAN · DIVISIBILITY DIAGRAM · 2000×1200" data-aspect="2/1">
+          <a href="photos.html#plans" class="image-slot image-slot--contain" data-slot="FLOOR PLAN · DIVISIBILITY DIAGRAM · 2000×1200" data-aspect="2/1">
             <img src="assets/Floorplan Master 2D and 3D.jpg" alt="Annotated floor plan." />
-          </div>
+          </a>
           <p class="floorplan-block__caption">
             Independent entries · separate parking lots · shared structure.<br />
             Occupy the 6,800 SF unit, lease out the 3,200 SF unit — or take the whole building.
@@ -1859,7 +1939,7 @@
         <div class="cost-strip" role="figure" aria-label="Acquisition cost versus replacement cost">
           <div class="cost-strip__cell">
             <div class="cost-strip__label">Replacement cost</div>
-            <div class="cost-strip__value">$2.685M</div>
+            <div class="cost-strip__value">$2.8–4M</div>
             <p class="cost-strip__sub">Insurance basis · what it would cost to build new today</p>
           </div>
           <div class="cost-strip__cell cost-strip__cell--accent">
@@ -1869,7 +1949,7 @@
           </div>
           <div class="cost-strip__cell">
             <div class="cost-strip__label">Time-to-operational</div>
-            <div class="cost-strip__value">90 days</div>
+            <div class="cost-strip__value">up to 180 days</div>
             <p class="cost-strip__sub">vs. 540–720 days for de novo development in this submarket</p>
           </div>
         </div>
@@ -1880,7 +1960,6 @@
             <ul class="spec-list">
               <li><span><span>Medical-licensed outpatient designation, operational</span></span></li>
               <li><span><span>Medical-grade plumbing throughout 6,800 SF unit</span></span></li>
-              <li><span><span>Pharmaceutical-rated storage <span class="annot">Insurance-certified</span></span></span></li>
               <li><span><span>Aquatic therapy pool with full ADA-compliant access</span></span></li>
               <li><span><span>Treatment rooms with built-out fixtures and casework</span></span></li>
               <li><span><span>ADA-compliant restrooms, both units</span></span></li>
@@ -1891,13 +1970,12 @@
           <div class="spec-col">
             <h3>Building systems</h3>
             <ul class="spec-list">
-              <li><span><span>New roof <span class="annot">Installed 2023</span></span></span></li>
               <li><span><span>HVAC operational <span class="annot">No deferred maintenance</span></span></span></li>
               <li><span><span>Electrical capacity supporting medical equipment loads</span></span></li>
               <li><span><span>Two independent service entries</span></span></li>
               <li><span><span>Dual-meter utility separation between units</span></span></li>
-              <li><span><span>Two separate parking lots <span class="annot">~[[XX]] total spaces</span></span></span></li>
-              <li><span><span>Building replacement cost <span class="annot">$2,685,000 insurance basis</span></span></span></li>
+              <li><span><span>Two separate parking lots <span class="annot">Independent ingress per unit</span></span></span></li>
+              <li><span><span>Building replacement cost <span class="annot">up to $2.8–4M insurance basis</span></span></span></li>
             </ul>
           </div>
         </div>
@@ -1905,7 +1983,7 @@
         <p class="spec-footnote">
           Full specifications, mechanical drawings, and insurance documentation included in the investment package.
         </p>
-        <a href="#" class="resource">
+        <a href="assets/577 Brookmeade Property Data.pdf" class="resource">
           Annotated specifications sheet
           <span class="filetype">PDF · 2.4MB</span>
         </a>
@@ -1943,7 +2021,7 @@
               <tr>
                 <td>332 Medcrest Dr</td>
                 <td>Crestview</td>
-                <td class="num">[[date]]</td>
+                <td class="num">Oct 2024</td>
                 <td class="num">7,337</td>
                 <td class="price">$412</td>
                 <td class="note">Stabilized, NOMC-adjacent</td>
@@ -1951,7 +2029,7 @@
               <tr>
                 <td>2400 S Ferdon Blvd</td>
                 <td>Crestview</td>
-                <td class="num">[[date]]</td>
+                <td class="num">May 2025</td>
                 <td class="num">7,000</td>
                 <td class="price">$297</td>
                 <td class="note">Multi-property sale, partial vacancy</td>
@@ -1959,15 +2037,15 @@
               <tr>
                 <td>550 Highway 85 N</td>
                 <td>Niceville</td>
-                <td class="num">[[date]]</td>
+                <td class="num">Jun 2024</td>
                 <td class="num">9,158</td>
                 <td class="price">$236</td>
                 <td class="note">Comparable submarket, coastal-side</td>
               </tr>
               <tr>
-                <td>767 Airport Rd · NW FL Surgery Ctr</td>
+                <td>767 Airport Rd</td>
                 <td>Panama City</td>
-                <td class="num">[[date]]</td>
+                <td class="num">Aug 2025</td>
                 <td class="num">13,129</td>
                 <td class="price">$548</td>
                 <td class="note">Surgical-license premium</td>
@@ -1997,14 +2075,14 @@
               <div class="stat__label">Months on market <span style="color: var(--muted-2);">(recent transactions)</span></div>
               <div class="stat__right">
                 <span class="stat__value">1.8</span>
-                <span class="stat__delta">months</span>
+                <span class="stat__delta stat__delta--down">months</span>
               </div>
             </div>
-            <div class="stat stat--muted">
+            <div class="stat">
               <div class="stat__label">FL panhandle MOB average vacancy</div>
               <div class="stat__right">
                 <span class="stat__value">4.0%</span>
-                <span class="stat__delta">market-wide comparison</span>
+                <span class="stat__delta stat__delta--down">market-wide comparison</span>
               </div>
             </div>
           </div>
@@ -2069,9 +2147,9 @@
           </div>
         </div>
 
-        <a href="#" class="resource" style="margin-top: 56px;">
+        <a href="assets/Comp Set and Market Data.pdf" class="resource" style="margin-top: 56px;" target="_blank" rel="noopener">
           Full comp set + market data
-          <span class="filetype">CSV + PDF</span>
+          <span class="filetype">PDF</span>
         </a>
       </div>
     </section>
@@ -2085,7 +2163,7 @@
           <div class="eyebrow">
             <span class="num">07</span><span class="dot">/</span><span>Speed to market</span>
           </div>
-          <h2 id="speed-headline">90 days to operational. Greenfield takes 18 to 24.</h2>
+          <h2 id="speed-headline">180 days to operational. Ground up takes 18 to 24 months.</h2>
           <p class="lead" style="margin-top: 20px;">
             Every quarter you don't open is a quarter of patient volume you don't capture.
           </p>
@@ -2093,22 +2171,22 @@
 
         <div class="speed__body">
           <p>For platforms measured on time-to-revenue, the calculus on this asset is straightforward. A typical de novo medical site in this submarket — assuming entitled land, no permit delays, and a cooperating municipality — runs 18 to 24 months from site control to certificate of occupancy. Tenant improvements for a medical fit-out add 60 to 120 days on top.</p>
-          <p>This asset compresses that timeline to 90 days. Days 1–30 cover due diligence and license assignment. Days 30–60 cover any platform-specific tenant improvements (most will be cosmetic and signage). Days 60–90 cover staffing, certification, and ramp.</p>
+          <p>This asset compresses that timeline to up to 180 days. The first 30 days cover due diligence and license assignment. The next 60 days cover any platform-specific tenant improvements (most will be cosmetic and signage). The remaining 90 days cover staffing, certification, and ramp.</p>
           <p>The opportunity cost of a 15-month timeline delta — at typical NWFL medical practice contribution margins — is meaningful. The investment package quantifies it for your model.</p>
         </div>
 
         <div class="speed__viz">
-          <div class="image-slot image-slot--contain" data-slot="ACQUIRE vs GREENFIELD · TIMELINE COMPARISON · 1600×900" data-aspect="16/9">
-            <img src="assets/acquire-vs-greenfield.jpg" alt="Visual comparison: 90 days to acquire 577 Brookmeade versus 540–720 days for greenfield development." />
+          <div class="image-slot image-slot--contain" data-slot="ACQUIRE vs GROUND UP · TIMELINE COMPARISON · 1600×900" data-aspect="16/9">
+            <img src="assets/acquire-vs-greenfield.jpg" alt="Visual comparison: up to 180 days to acquire 577 Brookmeade versus 540–720 days for ground-up development." />
           </div>
         </div>
 
-        <div class="opp-cost" role="figure" aria-label="Opportunity cost of greenfield versus acquisition">
-          <div class="opp-cost__big">15 months</div>
+        <div class="opp-cost" role="figure" aria-label="Opportunity cost of ground-up development versus acquisition">
+          <div class="opp-cost__big">18 months</div>
           <div class="opp-cost__body">
             <div class="opp-cost__label">The Delta</div>
             <p class="opp-cost__text">
-              The opportunity cost of a 15-month timeline delta — at typical NWFL medical practice contribution margins — is quantified in the investment package for your model.
+              The opportunity cost of a 18-month timeline delta — at typical NWFL medical practice contribution margins — is quantified in the investment package for your model.
             </p>
           </div>
         </div>

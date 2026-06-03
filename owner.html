@@ -170,6 +170,16 @@
     );
   }
   .image-slot img { width: 100%; height: 100%; object-fit: cover; }
+  /* Anchor-wrapped slots — make them behave as block + subtle hover */
+  a.image-slot {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+  a.image-slot img { transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1); }
+  a.image-slot:hover img,
+  a.image-slot:focus-visible img { transform: scale(1.025); }
   .image-slot--bottom img  { object-position: center 78%; }
   .image-slot--top img     { object-position: center 22%; }
   .image-slot--right img   { object-position: right center; }
@@ -1327,6 +1337,63 @@
   }
   .skip-link:focus { top: 12px; }
 
+  /* ============================================
+     PAGE SWITCHER — audience-version banner above header
+     ============================================ */
+  .page-switcher {
+    background: var(--ink-2);
+    border-bottom: 1px solid var(--rule);
+    padding: 12px 0;
+    font-family: var(--mono);
+    font-size: var(--fs-micro);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 51;
+  }
+  .page-switcher__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .page-switcher__current {
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .page-switcher__current strong {
+    color: var(--paper);
+    font-weight: 500;
+  }
+  .page-switcher__dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .page-switcher__alt {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+  }
+  .page-switcher__alt:hover,
+  .page-switcher__alt:focus-visible {
+    color: var(--accent-2);
+    border-bottom-color: currentColor;
+    outline: none;
+  }
+  @media (max-width: 640px) {
+    .page-switcher { padding: 10px 0; }
+    .page-switcher__current { font-size: 11px; }
+    .page-switcher__alt { font-size: 11px; }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
       animation-duration: 0.01ms !important;
@@ -1339,6 +1406,19 @@
 
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- PAGE SWITCHER -->
+  <div class="page-switcher" aria-label="Audience version">
+    <div class="container page-switcher__inner">
+      <span class="page-switcher__current">
+        <span class="page-switcher__dot" aria-hidden="true"></span>
+        Viewing: <strong>Practice owner</strong>
+      </span>
+      <a href="index.html" class="page-switcher__alt">
+        Switch to investor &amp; platform view →
+      </a>
+    </div>
+  </div>
 
   <!-- HEADER -->
   <header class="site-header">
@@ -1533,7 +1613,7 @@
         <div class="case__body">
           <p>A decade of lease payments is a decade of building someone else's equity. At $13,000 to $20,000 a month in rent — typical for a practice this size in NWFL — that's $1.5M to $2.4M paid out over ten years with nothing on your balance sheet at the end.</p>
           <p>Owning your practice's building flips that math. The payment goes to principal. The building appreciates. When you retire, the building is either an income asset you keep or a sale that funds your next chapter.</p>
-          <p>The catch most owners worry about — that buying is complicated, risky, or out of reach — usually comes from imagining a deal that doesn't apply here. This building is already medical-licensed. It's already built out. It's already operating. There's no construction risk because there's no construction. There's no permit risk because there are no permits to pull. There's a 2023 roof, so no near-term surprises.</p>
+          <p>The catch most owners worry about — that buying is complicated, risky, or out of reach — usually comes from imagining a deal that doesn't apply here. This building is already medical-licensed. It's already built out. It's already operating. There's no construction risk because there's no construction. There's no permit risk because there are no permits to pull.</p>
           <p style="font-size: var(--fs-lead); color: var(--paper); margin-top: 28px;">You don't need to build a building. You just need to own one.</p>
         </div>
 
@@ -1593,27 +1673,27 @@
         </div>
 
         <div class="gallery">
-          <div class="image-slot" data-slot="EXTERIOR · FRONT ELEVATION · 1600×1200" data-aspect="4/3">
+          <a href="photos.html#exterior" class="image-slot" data-slot="EXTERIOR · FRONT ELEVATION · 1600×1200" data-aspect="4/3">
             <img src="assets/exterior-front.jpg" alt="Front exterior of 577 Brookmeade." />
-          </div>
-          <div class="image-slot" data-slot="EXTERIOR · AERIAL · 1200×800" data-aspect="3/2">
+          </a>
+          <a href="photos.html#clinical" class="image-slot" data-slot="EXTERIOR · AERIAL · 1200×800" data-aspect="3/2">
             <img src="assets/interior-clinical.png" alt="Interior clinical space." />
-          </div>
-          <div class="image-slot" data-slot="INTERIOR · CLINICAL · 1200×800" data-aspect="3/2">
-            <img src="assets/office.png" alt="Interior clinical space." />
-          </div>
+          </a>
+          <a href="photos.html#clinical" class="image-slot" data-slot="INTERIOR · CLINICAL · 1200×800" data-aspect="3/2">
+            <img src="assets/Moore Media_50.jpg" alt="Interior clinical space." />
+          </a>
         </div>
 
         <div class="gallery-extras">
-          <div class="image-slot" data-slot="INTERIOR · AQUATIC THERAPY · 1600×900" data-aspect="16/9">
+          <a href="photos.html#aquatic" class="image-slot" data-slot="INTERIOR · AQUATIC THERAPY · 1600×900" data-aspect="16/9">
             <img src="assets/interior-aquatic.jpg" alt="Aquatic therapy pool." />
-          </div>
-          <div class="image-slot" data-slot="INTERIOR · 3,200 SF SPECIALTY UNIT · 1600×900" data-aspect="16/9">
+          </a>
+          <a href="photos.html#specialty" class="image-slot" data-slot="INTERIOR · 3,200 SF SPECIALTY UNIT · 1600×900" data-aspect="16/9">
             <img src="assets/interior-specialty.jpg" alt="3,200 SF specialty unit." />
-          </div>
-          <div class="image-slot" data-slot="PARKING & SIGNAGE · 2400×900" data-aspect="21/9">
+          </a>
+          <a href="photos.html#exterior" class="image-slot" data-slot="PARKING & SIGNAGE · 2400×900" data-aspect="21/9">
             <img src="assets/parking-signage.jpg" alt="Parking and signage." />
-          </div>
+          </a>
         </div>
 
         <a href="photos.html" class="gallery-cta">
@@ -1627,9 +1707,9 @@
             <h3>One building, two units, two ways to use it</h3>
             <span style="font-family: var(--mono); font-size: var(--fs-micro); color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase;">Floor plan</span>
           </div>
-          <div class="image-slot image-slot--contain" data-slot="FLOOR PLAN · DIVISIBILITY DIAGRAM · 2000×1200" data-aspect="2/1">
+          <a href="photos.html#plans" class="image-slot image-slot--contain" data-slot="FLOOR PLAN · DIVISIBILITY DIAGRAM · 2000×1200" data-aspect="2/1">
             <img src="assets/Floorplan Master 2D and 3D.jpg" alt="Annotated floor plan." />
-          </div>
+          </a>
           <p class="floorplan-block__caption">
             Independent entries · separate parking lots · shared structure.<br />
             Occupy the 6,800 SF unit, lease out the 3,200 SF unit — or take the whole building.
@@ -1652,7 +1732,7 @@
         </div>
 
         <div class="buildout__body">
-          <p>When a medical practice builds out a new lease space, the typical cost runs $50 to $100 per square foot — and the timeline runs 4 to 8 months before the first patient walks in. That's $340,000 to $680,000 for a unit this size, plus half a year of paying rent on space you can't use yet.</p>
+          <p>When a medical practice builds out a new lease space, the typical cost runs $100 to $200 per square foot — and the timeline runs 4 to 8 months before the first patient walks in. That's $680,000 to $1,360,000 for a unit this size, plus half a year of paying rent on space you can't use yet.</p>
           <p>This building was purpose-built as a medical clinic and has operated as one continuously. The medical plumbing is in. The treatment rooms are built. The aquatic therapy pool — rare and expensive to add — is operating. The pharmaceutical storage is insurance-certified. The HVAC supports clinical loads.</p>
           <p>You don't pay for any of it. You don't wait for any of it. You walk in, get your license assigned, and see patients.</p>
         </div>
@@ -1660,8 +1740,8 @@
         <div class="cost-reveal" role="figure" aria-label="What you save by buying a built-out medical clinic versus building one">
           <div class="cost-reveal__cell">
             <div class="cost-reveal__label">Typical TI cost</div>
-            <div class="cost-reveal__value">$340–680K</div>
-            <p class="cost-reveal__sub">Per unit this size, at $50–$100/SF for medical fit-out</p>
+            <div class="cost-reveal__value">$680K–1.36M</div>
+            <p class="cost-reveal__sub">Per unit this size, at $100–$200/SF for medical fit-out</p>
           </div>
           <div class="cost-reveal__cell cost-reveal__cell--saved">
             <div class="cost-reveal__label">What you skip</div>
@@ -1670,23 +1750,11 @@
           </div>
           <div class="cost-reveal__cell">
             <div class="cost-reveal__label">Time saved</div>
-            <div class="cost-reveal__value">4–8 mo</div>
+            <div class="cost-reveal__value">6-12 mo</div>
             <p class="cost-reveal__sub">No construction. No permit risk. No rent paid on space you can't use.</p>
           </div>
         </div>
 
-        <div class="buildout__gallery">
-          <div class="image-slot" data-slot="BUILD-OUT · TREATMENT ROOM · 1200×900" data-aspect="4/3">
-            <img src="assets/20260416_164835.jpg" alt="Built-out clinical treatment room with parallel bars, treatment tables, and rehabilitation equipment." />
-          </div>
-          <div class="image-slot" data-slot="BUILD-OUT · AQUATIC POOL · 1200×900" data-aspect="4/3">
-            <img src="assets/interior-aquatic2.jpg" alt="Aquatic therapy pool installed and operating." />
-          </div>
-          <div class="image-slot" data-slot="BUILD-OUT · SPECIALTY UNIT · 1200×900" data-aspect="4/3">
-            <img src="assets/20260416_165926.jpg" alt="Specialty unit interior with built-out casework and finished space." />
-          </div>
-        </div>
-        <p class="buildout__caption">Built for medicine, in active medical use today.</p>
       </div>
     </section>
 
@@ -1842,8 +1910,12 @@
 
           <aside class="form-reassurance">
             <h3>What you'll receive</h3>
-            <p>An estimated monthly payment specific to your situation, the full ownership pro forma (including tax treatment of mortgage interest and depreciation), and a no-pressure introduction to an SBA-experienced lender.</p>
+            <p>An estimated monthly payment specific to your situation, the full property data sheet, and a no-pressure introduction to an SBA-experienced lender.</p>
             <p>Sent within one business day. No follow-up unless you ask for it.</p>
+            <a href="assets/577 Brookmeade Property Data.pdf" class="resource" target="_blank" rel="noopener">
+              Property data sheet
+              <span class="filetype">PDF</span>
+            </a>
             <div class="form-reassurance__cta">
               <div class="form-reassurance__cta-label">Prefer to talk first?</div>
               <a href="#listing-team" class="btn btn--ghost form-reassurance__btn">
